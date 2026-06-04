@@ -1,2 +1,9 @@
 [build]
   publish = "."
+
+# Prevent the browser and CDN from caching data files
+# so CMS changes go live immediately after publishing
+[[headers]]
+  for = "/_data/*"
+    [headers.values]
+      Cache-Control = "no-cache, no-store, must-revalidate"

@@ -1,0 +1,256 @@
+{
+  "staff": [
+    {
+      "name": "Tim Kollmorgen",
+      "role": "Principal · 7–8th Grade Math",
+      "section": "Administration",
+      "photo": "images/staff/0011_Kollmorgen_Kim_01.jpg",
+      "email": "tim.kollmorgen@stmarks.com",
+      "bio": "Mr. Kollmorgen leads St. Mark's Lutheran School with a commitment to academic excellence and Christ-centered education. He also serves as the 7th and 8th grade math teacher.",
+      "showInDirectory": true
+    },
+    {
+      "name": "Rachel Bailey",
+      "role": "Admissions Director",
+      "section": "Administration",
+      "photo": "images/staff/0001_Bailey_Rachel_01.jpg",
+      "email": "rachel.bailey@stmarks.com",
+      "bio": "Mrs. Bailey oversees student enrollment and admissions at St. Mark's, serving as a welcoming first point of contact for prospective families interested in joining our school community.",
+      "showInDirectory": true
+    },
+    {
+      "name": "Diane Cartheuser",
+      "role": "School Office",
+      "section": "Administration",
+      "photo": "images/staff/0005_Cartheuser_Diane_01.jpg",
+      "email": "diane.cartheuser@stmarks.com",
+      "bio": "Mrs. Cartheuser serves in the school office, supporting the daily administrative operations of St. Mark's Lutheran School.",
+      "showInDirectory": true
+    },
+    {
+      "name": "Shana McKinney",
+      "role": "Attendance & Orders",
+      "section": "Administration",
+      "photo": "images/staff/0014_McKinney_Shana_01.jpg",
+      "email": "shana.mckinney@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Lindsey Newell",
+      "role": "3 Year Old Teacher",
+      "section": "Preschool",
+      "photo": "images/staff/0016_Newell_Lindsey_01.jpg",
+      "email": "lindsey.newell@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Janet Rehmer",
+      "role": "4 Year Old Teacher",
+      "section": "Preschool",
+      "photo": "images/staff/0017_Rehmer_Janet_01.jpg",
+      "email": "janet.rehmer@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Anne Boerboom",
+      "role": "4 Year Old Teacher",
+      "section": "Preschool",
+      "photo": "images/staff/0003_Boerboom_Anne_01.jpg",
+      "email": "anne.boerboom@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Carrie Vedder",
+      "role": "3 Year Old Aide",
+      "section": "Preschool",
+      "photo": "images/staff/0022_Vedder_Carrie_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Jennifer Wilder",
+      "role": "4 Year Old Aide",
+      "section": "Preschool",
+      "photo": "images/staff/0025_Wilder_Jennifer_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Jeanie Schuchhardt",
+      "role": "4 Year Old Aide",
+      "section": "Preschool",
+      "photo": "images/staff/0020_Schuchhardt_Jeanie_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Amanda Dews",
+      "role": "Kindergarten Teacher",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0007_Dews_Amanda_01.jpg",
+      "email": "amanda.dews@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Heather McKinley",
+      "role": "Kindergarten Teacher",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0013_McKinley_Heather_01.jpg",
+      "email": "heather.mckinley@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Emily Weiss",
+      "role": "1st Grade Teacher",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0024_Weiss_Emily_01.jpg",
+      "email": "emily.weiss@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Angela Behnke",
+      "role": "1st Grade Aide",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0002_Behnke_Angela_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Nicole Moyer",
+      "role": "2nd Grade Teacher",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0015_Moyer_Nicole_01.jpg",
+      "email": "nicole.moyer@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Kourtney Dowd",
+      "role": "3rd Grade Teacher",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0008_Dowd_Kourtney_01.jpg",
+      "email": "kourtney.dowd@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Rebecca Kollmorgen",
+      "role": "4th Grade Homeroom · K–8 Music",
+      "section": "Kindergarten & Grades 1–4",
+      "photo": "images/staff/0012_Kollmorgen_Rebecca_01.jpg",
+      "email": "rebecca.kollmorgen@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Madalyn Graves",
+      "role": "5th Grade Homeroom · Social Studies",
+      "section": "Grades 5–8",
+      "photo": "images/staff/0009_Graves_Madalyn_01.jpg",
+      "email": "madalyn.graves@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Lisa Rhonemus",
+      "role": "6th Grade Homeroom · Science",
+      "section": "Grades 5–8",
+      "photo": "images/staff/0018_Rhonemus_Lisa_01.jpg",
+      "email": "lisa.rhonemus@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Andrea Kiehl",
+      "role": "7th–8th Grade Homeroom · Language Arts",
+      "section": "Grades 5–8",
+      "photo": "images/staff/0010_Kiehl_Andrea_01.jpg",
+      "email": "andrea.kiehl@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Ruth Brothers",
+      "role": "Speech Intervention",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0004_Brothers_Ruth_01.jpg",
+      "email": "ruth.brothers@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Sara Uhl",
+      "role": "Reading Specialist",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0023_Uhl_Sara_01.jpg",
+      "email": "sara.uhl@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Kara Williamson",
+      "role": "Math Specialist",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0026_Williamson_Kara_01.jpg",
+      "email": "kara.williamson@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Scott Stygar",
+      "role": "K–3 Science · 4–8 Technology",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0021_Stygar_Scott_01.jpg",
+      "email": "scott.stygar@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Gabriela Vintimilla",
+      "role": "Spanish Teacher",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0023_Vintimilla_Gabriela_01.jpg",
+      "email": "gabriela.vintimilla@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Mr. Penry",
+      "role": "Faculty",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0007_Penry_Mr._01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Kathy Coletta",
+      "role": "Extended Care",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0006_Coletta_Kathy_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Paula Schepmann",
+      "role": "Staff",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0019_Schepmann_Paula_01.jpg",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    }
+  ]
+}

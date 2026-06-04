@@ -2,76 +2,162 @@ backend:
   name: git-gateway
   branch: main
 
+logo_url: /images/New Logo Design 4 Transparent.png
+
 media_folder: "images"
 public_folder: "/images"
 
+# What teachers see in the left sidebar — keep these names simple and action-oriented
 collections:
 
-  # ── ANNOUNCEMENTS & BANNERS ──────────────────────────────────
+  # ── BANNERS ──────────────────────────────────────────────────────────────────
   - name: "banners"
-    label: "Announcements & Banners"
+    label: "📢 Banners & Announcements"
+    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish."
     files:
 
       - name: "reenrollment"
         label: "Re-Enrollment Banner"
         file: "_data/banner.json"
         fields:
-          - label: "Show Banner on Site"
+
+          - label: "Show this banner on the website?"
             name: "active"
             widget: "boolean"
             default: false
-            hint: "Turn on to show the banner. Turn off to hide it."
+            hint: "✅ ON = banner is visible to families. ❌ OFF = banner is hidden. Remember to click Publish after changing."
+
           - label: "School Year"
             name: "year"
             widget: "string"
-            hint: "e.g. 2025–2026"
-          - label: "Headline"
+            hint: "Shown at the top of the banner. Example: 2026–2027"
+
+          - label: "Banner Headline"
             name: "headline"
             widget: "string"
-          - label: "Description"
+            hint: "The big bold text families see first. Example: Re-Enrollment is Now Open"
+
+          - label: "Banner Description"
             name: "description"
             widget: "text"
-          - label: "Deadline"
+            hint: "1–2 sentences explaining what families should do."
+
+          - label: "Deadline Date"
             name: "deadline"
             widget: "string"
-            hint: "e.g. March 31"
+            hint: "Just the date as text. Example: March 31  or  April 15, 2026"
+
           - label: "Button Text"
             name: "buttonText"
             widget: "string"
-            default: "Re-Enroll Now →"
-          - label: "Button Link"
+            hint: "The text on the button families click. Example: Re-Enroll Now →"
+
+          - label: "Button Link (URL)"
             name: "buttonLink"
             widget: "string"
-            default: "https://factsmgt.com/login/"
+            hint: "Where the button takes families. Use the FACTS portal link or leave as-is."
 
-  # ── SUPPLY LISTS ─────────────────────────────────────────────
+  # ── SUPPLY LISTS ─────────────────────────────────────────────────────────────
   - name: "supply-list"
-    label: "Supply Lists"
+    label: "🎒 Supply Lists"
+    description: "Update the classroom supply list each summer. You can add, remove, or edit items for any grade."
     files:
 
       - name: "supply_list"
         label: "Classroom Supply Lists"
         file: "_data/supply-list.json"
         fields:
+
           - label: "School Year"
             name: "year"
             widget: "string"
-            hint: "e.g. 2025–2026"
+            hint: "Shown at the top of the supply list page. Example: 2026–2027"
+
           - label: "Grades"
             name: "grades"
             widget: "list"
+            label_singular: "Grade"
             summary: "{{fields.label}}"
+            hint: "Each grade has its own list. Click a grade to expand and edit it. Use the handles (⠿) to reorder grades."
             fields:
+
               - label: "Grade Name"
                 name: "label"
                 widget: "string"
-                hint: "e.g. 3 Year Old, Kindergarten, 1st Grade"
-              - label: "Note (optional)"
+                hint: "How it appears on the website. Example: 3rd Grade  or  Kindergarten"
+
+              - label: "Teacher Note (optional)"
                 name: "note"
                 widget: "string"
                 required: false
-                hint: "Shown under the grade name. Leave blank if not needed."
+                hint: "Optional note shown under the grade name, e.g. 'Mrs. Dews may send home additional items the first week.'"
+
               - label: "Supply Items"
                 name: "items"
                 widget: "list"
-                hint: "One item per line. Add, remove, or reorder as needed."
+                label_singular: "Item"
+                hint: "One supply item per line. Click '+ Add Item' to add more. Drag to reorder."
+
+  # ── STAFF DIRECTORY ──────────────────────────────────────────────────────────
+  - name: "staff"
+    label: "👩‍🏫 Staff Directory"
+    description: "Add, remove, or update staff members. Changes appear on both the Faculty & Staff page and the Current Families contact directory."
+    files:
+
+      - name: "staff_list"
+        label: "Faculty & Staff"
+        file: "_data/staff.json"
+        fields:
+
+          - label: "Staff Members"
+            name: "staff"
+            widget: "list"
+            label_singular: "Staff Member"
+            summary: "{{fields.name}} — {{fields.role}}"
+            hint: "Each person on staff. Click a name to edit. Drag to reorder."
+            fields:
+
+              - label: "Full Name"
+                name: "name"
+                widget: "string"
+                hint: "e.g. Amanda Dews  or  Mr. Penry"
+
+              - label: "Role / Title"
+                name: "role"
+                widget: "string"
+                hint: "e.g. Kindergarten Teacher  or  Principal · 7–8th Grade Math"
+
+              - label: "Section"
+                name: "section"
+                widget: "select"
+                hint: "Which group this person appears under on the Faculty & Staff page."
+                options:
+                  - { label: "Administration", value: "Administration" }
+                  - { label: "Preschool", value: "Preschool" }
+                  - { label: "Kindergarten & Grades 1–4", value: "Kindergarten & Grades 1–4" }
+                  - { label: "Grades 5–8", value: "Grades 5–8" }
+                  - { label: "Specialists & Support", value: "Specialists & Support" }
+
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+                required: false
+                hint: "Upload a headshot photo. Square or portrait works best."
+
+              - label: "Email Address"
+                name: "email"
+                widget: "string"
+                required: false
+                hint: "Staff email. Leave blank if not applicable."
+
+              - label: "Short Bio (optional)"
+                name: "bio"
+                widget: "text"
+                required: false
+                hint: "1–2 sentences shown on the Faculty & Staff page. Only needed for Administration staff."
+
+              - label: "Show in Family Contact Directory?"
+                name: "showInDirectory"
+                widget: "boolean"
+                default: true
+                hint: "✅ ON = appears in the Current Families email directory. Turn OFF for aides and support roles that families don't contact directly."
