@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>St. Mark's Lutheran Church & School — Milford, OH</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -257,6 +258,18 @@
   .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 8px; }
   .footer-lcms { color: var(--gold-light); font-weight: 700; }
 
+  /* ── SUPPLY LIST ACCORDION ── */
+  .grade-accordion { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+  .grade-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; background: #fff; transition: background 0.15s; user-select: none; }
+  .grade-header:hover { background: var(--cream); }
+  .grade-header.open { background: var(--navy); }
+  .grade-header-name { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+  .grade-header.open .grade-header-name { color: #fff; }
+  .grade-arrow { font-size: 11px; color: var(--gold); transition: transform 0.25s; flex-shrink: 0; }
+  .grade-header.open .grade-arrow { transform: rotate(180deg); color: var(--gold-light); }
+  .grade-body { display: none; border-top: 1px solid var(--border); }
+  .grade-body.open { display: block; }
+
   /* ── MOBILE NAV ── */
   .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; padding: 10px; border: none; background: none; flex-shrink: 0; }
   .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
@@ -276,6 +289,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
     .util-bar { display: none; }
+    .fleur-lg { font-size: 26px !important; }
     .nav { height: 72px; padding: 0 1.25rem; }
     .nav-logo img { height: 56px !important; }
     .nav-links { display: none !important; }
@@ -752,7 +766,7 @@
 <!-- CONTACT PAGE -->
 <div id="page-contact" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">We'd love to hear from you</div>
       <h1 class="hero-title" style="font-size:38px;">Get in Touch</h1>
@@ -1634,7 +1648,7 @@
 <!-- SCHOOL ABOUT: LANDING PAGE -->
 <div id="page-school-about" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">About Our School</h1>
@@ -1670,7 +1684,7 @@
 <!-- SCHOOL HISTORY PAGE -->
 <div id="page-school-history" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Our History</h1>
@@ -1734,7 +1748,7 @@
 
 <div id="page-school-staff" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Faculty &amp; Staff</h1>
@@ -1955,7 +1969,7 @@
 <!-- TUITION & FEES PAGE -->
 <div id="page-tuition" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Tuition &amp; Fees 2025&ndash;2026</h1>
@@ -2319,7 +2333,7 @@
 <!-- MESSENGER PAGE -->
 <div id="page-messenger" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <h1 class="hero-title">The St. Mark's Messenger</h1>
       <p class="hero-sub">Our school newsletter — keeping families connected to the life and ministry of St. Mark's.</p>
@@ -2427,7 +2441,7 @@
 <!-- EXTENDED CARE PAGE -->
 <div id="page-extended-care" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Extended Care</h1>
@@ -2510,7 +2524,7 @@
 <!-- PRESCHOOL PAGE -->
 <div id="page-preschool" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Preschool Program</h1>
@@ -2574,7 +2588,7 @@
 <!-- ACADEMICS: LANDING PAGE -->
 <div id="page-academics" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Academics</h1>
@@ -2612,7 +2626,7 @@
 <!-- ACADEMICS: CURRICULUM -->
 <div id="page-academics-curriculum" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Academics</div>
       <h1 class="hero-title">Curriculum</h1>
@@ -2689,7 +2703,7 @@
 <!-- ACADEMICS: FAITH INTEGRATION -->
 <div id="page-academics-faith" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Academics</div>
       <h1 class="hero-title">Faith Integration</h1>
@@ -2730,7 +2744,7 @@
 <!-- CURRENT FAMILIES PAGE -->
 <div id="page-current-families" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
       <h1 class="hero-title">Current Families</h1>
@@ -2738,6 +2752,8 @@
     </div>
   </div>
   <div class="section">
+
+    <div id="re-enrollment-banner"></div>
 
     <!-- Portal — primary action, appears once -->
     <div style="background:linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius:10px; padding:32px 36px; margin-bottom:48px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
@@ -2758,7 +2774,7 @@
 
     <div style="border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:48px;">
       <div style="background:var(--navy); padding:18px 24px; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:16px; color:var(--gold-light);">&#x269C;</span>
+        <span style="font-size:16px; color:var(--gold-light);">&#x269C;&#xFE0E;</span>
         <div style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#fff; letter-spacing:0.08em; text-transform:uppercase;">Faculty &amp; Staff Directory</div>
       </div>
 
@@ -2908,7 +2924,7 @@
 <!-- SUPPLY LIST — content rendered from SUPPLY_LIST_GRADES in the script below -->
 <div id="page-supply-list" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge" id="supply-list-badge">Supply Lists</div>
       <h1 class="hero-title">Classroom Supply List</h1>
@@ -2938,7 +2954,7 @@
 <!-- EXTRACURRICULAR: LANDING PAGE -->
 <div id="page-extracurricular" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
       <h1 class="hero-title">Extracurricular</h1>
@@ -2975,7 +2991,7 @@
 <!-- EXTRACURRICULAR: ACTIVITIES & CLUBS -->
 <div id="page-extracurricular-activities" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
       <h1 class="hero-title">Activities &amp; Clubs</h1>
@@ -3099,7 +3115,7 @@
 <!-- EXTRACURRICULAR: SPORTS -->
 <div id="page-extracurricular-sports" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Saints</div>
       <h1 class="hero-title">Sports</h1>
@@ -3107,7 +3123,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-label" style="display:flex; align-items:center; justify-content:center; gap:8px;"><span style="color:var(--gold); font-size:12px;">&#x269C;</span> Athletic Programs <span style="color:var(--gold); font-size:12px;">&#x269C;</span></div>
+    <div class="section-label" style="display:flex; align-items:center; justify-content:center; gap:8px;"><span style="color:var(--gold); font-size:12px;">&#x269C;&#xFE0E;</span> Athletic Programs <span style="color:var(--gold); font-size:12px;">&#x269C;&#xFE0E;</span></div>
     <h2 class="section-title">Sports at St. Mark's</h2>
     <div class="divider"></div>
     <div class="card-grid" style="margin-bottom:48px;">
@@ -3128,25 +3144,25 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-icon" style="background:var(--navy); color:var(--gold-light); font-size:22px;">&#x269C;</div>
+        <div class="card-icon" style="background:var(--navy); color:var(--gold-light); font-size:22px;">&#x269C;&#xFE0E;</div>
         <div class="card-title">Runners Club</div>
         <div style="font-size:11px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Grades 1&ndash;8 &mdash; Autumn</div>
         <p class="card-body">An autumn program where students enjoy the fun and benefits of running. Participants earn colored sticks for each lap completed throughout the season.</p>
       </div>
     </div>
     <div style="background:var(--navy); padding:36px 2rem; text-align:center; position:relative; overflow:hidden; border-radius:8px; margin-bottom:32px;">
-      <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:220px; color:rgba(181,137,42,0.07); line-height:1; pointer-events:none; user-select:none;">&#x269C;</div>
+      <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:220px; color:rgba(181,137,42,0.07); line-height:1; pointer-events:none; user-select:none;">&#x269C;&#xFE0E;</div>
       <div style="position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
-        <span style="font-size:44px; color:var(--gold); line-height:1;">&#x269C;</span>
+        <span class="fleur-lg" style="font-size:44px; color:var(--gold); line-height:1;">&#x269C;&#xFE0E;</span>
         <div>
           <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:700; color:#fff; letter-spacing:0.12em; text-transform:uppercase;">St. Mark's Saints</div>
           <div style="font-family:'Montserrat',sans-serif; font-size:11px; color:var(--gold-light); letter-spacing:0.2em; text-transform:uppercase; margin-top:4px;">Purple &amp; Gold &middot; Go Saints!</div>
         </div>
-        <span style="font-size:44px; color:var(--gold); line-height:1;">&#x269C;</span>
+        <span class="fleur-lg" style="font-size:44px; color:var(--gold); line-height:1;">&#x269C;&#xFE0E;</span>
       </div>
     </div>
     <div style="background:var(--warm-white); border:1px solid var(--border); border-radius:8px; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; position:relative; overflow:hidden;">
-      <div style="position:absolute; right:-8px; top:50%; transform:translateY(-50%); font-size:150px; color:rgba(22,4,64,0.04); line-height:1; pointer-events:none; user-select:none;">&#x269C;</div>
+      <div style="position:absolute; right:-8px; top:50%; transform:translateY(-50%); font-size:150px; color:rgba(22,4,64,0.04); line-height:1; pointer-events:none; user-select:none;">&#x269C;&#xFE0E;</div>
       <div style="position:relative; z-index:1;">
         <div class="section-label">Get Involved</div>
         <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; color:var(--navy); margin-bottom:4px;">Questions About Sports?</h3>
@@ -3160,7 +3176,7 @@
 <!-- EXTRACURRICULAR: FINE ARTS -->
 <div id="page-extracurricular-arts" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
       <h1 class="hero-title">Fine Arts</h1>
@@ -3216,7 +3232,7 @@
 <!-- ADMISSIONS: LANDING PAGE -->
 <div id="page-admissions" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">2026–2027 Enrollment</div>
       <h1 class="hero-title">Admissions</h1>
@@ -3258,7 +3274,7 @@
 <!-- ENROLL PAGE -->
 <div id="page-enroll" class="page">
   <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
-    <div class="solid-fleur">&#x269C;</div>
+    <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Admissions 2026–2027</div>
       <h1 class="hero-title">Enroll at St. Mark's</h1>
@@ -3576,15 +3592,8 @@ function renderSermonFeature() {
   el.innerHTML = html;
 }
 
-// ============================================================
-// SUPPLY LIST — easy to edit!
-// To update for a new year:
-//   1. Change SUPPLY_LIST_YEAR to the new school year string.
-//   2. Edit the items arrays below — each string is one line item.
-//   3. Add/remove/rename grade objects as needed.
-//      Each grade: { label: 'Grade Name', note: 'optional note', items: ['item', ...] }
-// ============================================================
-var SUPPLY_LIST_YEAR = '2025–2026';
+// Supply list data has moved to _data/supply-list.json
+// Edit it there, or through the CMS at /admin
 var SUPPLY_LIST_GRADES = [
   {
     label: '3 Year Old',
@@ -3828,30 +3837,69 @@ var SUPPLY_LIST_GRADES = [
 ];
 
 function renderSupplyList() {
-  var badge = document.getElementById('supply-list-badge');
-  if (badge) badge.textContent = SUPPLY_LIST_YEAR + ' Supply Lists';
-  var annTitle = document.getElementById('supply-list-ann-title');
-  if (annTitle) annTitle.textContent = SUPPLY_LIST_YEAR + ' supply lists — updated each summer';
   var container = document.getElementById('supply-list-content');
   if (!container) return;
-  var html = '';
-  for (var i = 0; i < SUPPLY_LIST_GRADES.length; i++) {
-    var grade = SUPPLY_LIST_GRADES[i];
-    html += '<div style="margin-top:' + (i === 0 ? '0' : '48px') + ';">';
-    html += '<h2 class="section-title">' + grade.label + '</h2>';
-    html += '<div class="divider"></div>';
-    if (grade.note) html += '<p style="font-size:13px;color:var(--text-mid);margin-bottom:12px;">' + grade.note + '</p>';
-    html += '<ul style="list-style:none;padding:0;margin:0;">';
-    for (var j = 0; j < grade.items.length; j++) {
-      var border = j < grade.items.length - 1 ? 'border-bottom:1px solid var(--border);' : '';
-      html += '<li style="padding:9px 4px;font-size:14px;color:var(--text-dark);' + border + 'display:flex;align-items:flex-start;gap:10px;">';
-      html += '<span style="color:var(--gold);font-size:11px;margin-top:3px;flex-shrink:0;">&#9642;</span>';
-      html += grade.items[j] + '</li>';
-    }
-    html += '</ul></div>';
-  }
-  container.innerHTML = html;
+  container.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Loading supply lists&hellip;</p>';
+  fetch('/_data/supply-list.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var badge = document.getElementById('supply-list-badge');
+      if (badge) badge.textContent = data.year + ' Supply Lists';
+      var annTitle = document.getElementById('supply-list-ann-title');
+      if (annTitle) annTitle.textContent = data.year + ' supply lists — updated each summer';
+      var html = '';
+      for (var i = 0; i < data.grades.length; i++) {
+        var grade = data.grades[i];
+        html += '<div class="grade-accordion">';
+        html += '<div class="grade-header" id="grade-hdr-' + i + '" onclick="toggleGrade(' + i + ')">';
+        html += '<span class="grade-header-name">' + grade.label + '</span>';
+        html += '<span class="grade-arrow">▼</span>';
+        html += '</div>';
+        html += '<div class="grade-body" id="grade-body-' + i + '">';
+        if (grade.note) html += '<p style="font-size:13px;color:var(--text-mid);padding:12px 20px 4px;">' + grade.note + '</p>';
+        html += '<ul style="list-style:none;padding:0 20px;margin:0;">';
+        for (var j = 0; j < grade.items.length; j++) {
+          var border = j < grade.items.length - 1 ? 'border-bottom:1px solid var(--border);' : '';
+          html += '<li style="padding:10px 4px;font-size:14px;color:var(--text-dark);' + border + 'display:flex;align-items:flex-start;gap:10px;">';
+          html += '<span style="color:var(--gold);font-size:11px;margin-top:3px;flex-shrink:0;">&#9642;</span>';
+          html += grade.items[j] + '</li>';
+        }
+        html += '</ul><div style="height:10px;"></div></div></div>';
+      }
+      container.innerHTML = html;
+    })
+    .catch(function() {
+      container.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Supply lists unavailable. Please contact the school office at (513) 575-3354.</p>';
+    });
 }
+
+function toggleGrade(idx) {
+  var hdr = document.getElementById('grade-hdr-' + idx);
+  var body = document.getElementById('grade-body-' + idx);
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+function loadBanner() {
+  fetch('/_data/banner.json')
+    .then(function(r) { return r.json(); })
+    .then(function(b) {
+      var el = document.getElementById('re-enrollment-banner');
+      if (!el || !b.active) return;
+      el.innerHTML =
+        '<div style="background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%);border-radius:10px;padding:28px 32px;margin-bottom:28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;">' +
+        '<div style="position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:130px;color:rgba(255,255,255,0.1);line-height:1;pointer-events:none;user-select:none;">&#x269C;&#xFE0E;</div>' +
+        '<div style="flex:1;min-width:200px;position:relative;z-index:1;">' +
+        '<div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">' + b.year + ' School Year</div>' +
+        '<div style="font-family:\'Montserrat\',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">' + b.headline + '</div>' +
+        '<p style="font-size:14px;color:rgba(255,255,255,0.9);line-height:1.6;margin:0;">' + b.description + ' <strong style="color:#fff;">Deadline: ' + b.deadline + '</strong></p>' +
+        '</div>' +
+        '<a href="' + b.buttonLink + '" target="_blank" style="flex-shrink:0;background:#fff;color:var(--gold-dark);font-family:\'Montserrat\',sans-serif;font-weight:700;font-size:13px;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,0.15);position:relative;z-index:1;">' + b.buttonText + '</a>' +
+        '</div>';
+    })
+    .catch(function() {});
+}
+loadBanner();
 
 function toggleMenu(which) {
   var btn = document.getElementById('hamburger-' + which);

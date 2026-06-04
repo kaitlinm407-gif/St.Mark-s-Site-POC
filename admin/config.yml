@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+
+  # ── ANNOUNCEMENTS & BANNERS ──────────────────────────────────
+  - name: "banners"
+    label: "Announcements & Banners"
+    files:
+
+      - name: "reenrollment"
+        label: "Re-Enrollment Banner"
+        file: "_data/banner.json"
+        fields:
+          - label: "Show Banner on Site"
+            name: "active"
+            widget: "boolean"
+            default: false
+            hint: "Turn on to show the banner. Turn off to hide it."
+          - label: "School Year"
+            name: "year"
+            widget: "string"
+            hint: "e.g. 2025–2026"
+          - label: "Headline"
+            name: "headline"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Deadline"
+            name: "deadline"
+            widget: "string"
+            hint: "e.g. March 31"
+          - label: "Button Text"
+            name: "buttonText"
+            widget: "string"
+            default: "Re-Enroll Now →"
+          - label: "Button Link"
+            name: "buttonLink"
+            widget: "string"
+            default: "https://factsmgt.com/login/"
+
+  # ── SUPPLY LISTS ─────────────────────────────────────────────
+  - name: "supply-list"
+    label: "Supply Lists"
+    files:
+
+      - name: "supply_list"
+        label: "Classroom Supply Lists"
+        file: "_data/supply-list.json"
+        fields:
+          - label: "School Year"
+            name: "year"
+            widget: "string"
+            hint: "e.g. 2025–2026"
+          - label: "Grades"
+            name: "grades"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - label: "Grade Name"
+                name: "label"
+                widget: "string"
+                hint: "e.g. 3 Year Old, Kindergarten, 1st Grade"
+              - label: "Note (optional)"
+                name: "note"
+                widget: "string"
+                required: false
+                hint: "Shown under the grade name. Leave blank if not needed."
+              - label: "Supply Items"
+                name: "items"
+                widget: "list"
+                hint: "One item per line. Add, remove, or reorder as needed."
