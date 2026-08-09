@@ -33,20 +33,29 @@ collections:
 
           - label: "Open House Date"
             name: "openHouseDate"
-            widget: "date"
+            widget: "datetime"
+            format: "YYYY-MM-DD"
             date_format: "YYYY-MM-DD"
+            time_format: false
+            picker_utc: true
             hint: "The date of the school's Open House event. Updates the Events page, Tuition page, and Admissions Key Dates automatically."
 
           - label: "New Student Applications Open Date"
             name: "enrollmentOpenDate"
-            widget: "date"
+            widget: "datetime"
+            format: "YYYY-MM-DD"
             date_format: "YYYY-MM-DD"
+            time_format: false
+            picker_utc: true
             hint: "The date new-student applications open. Updates the Admissions pages automatically."
 
           - label: "Re-Enrollment Open Date"
             name: "reenrollmentOpenDate"
-            widget: "date"
+            widget: "datetime"
+            format: "YYYY-MM-DD"
             date_format: "YYYY-MM-DD"
+            time_format: false
+            picker_utc: true
             hint: "The date re-enrollment opens for currently enrolled, returning students. Updates the Tuition, Events, and Key Dates pages automatically."
 
   # ── BANNERS ──────────────────────────────────────────────────────────────────
