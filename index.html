@@ -3763,7 +3763,7 @@ function closeMobileMenus() {
   document.querySelectorAll('.mobile-menu').forEach(function(m) { m.classList.remove('open'); });
 }
 
-function showPage(name) {
+function showPage(name, skipHistory) {
     closeMobileMenus();
     var target = document.getElementById('page-' + name);
     if (!target) { console.error('showPage: no element with id page-' + name); return; }
@@ -3785,7 +3785,29 @@ function showPage(name) {
       if (navEl) navEl.classList.add('active');
     }
     window.scrollTo(0, 0);
+    if (!skipHistory && location.hash !== '#' + name) {
+      history.pushState({ page: name }, '', '#' + name);
+    }
   }
+
+// Back/forward button support: showPage() above pushes a history entry for
+// every page switch; this restores the page when the user navigates history
+// without pushing a duplicate entry (skipHistory = true).
+window.addEventListener('popstate', function(e) {
+  var name = (e.state && e.state.page) || 'home';
+  showPage(name, true);
+});
+
+(function() {
+  var initial = location.hash ? location.hash.slice(1) : '';
+  if (initial && document.getElementById('page-' + initial)) {
+    showPage(initial, true);
+    history.replaceState({ page: initial }, '', '#' + initial);
+  } else {
+    history.replaceState({ page: 'home' }, '', location.pathname + location.search);
+  }
+})();
+
 function showCalendar() {
   var iframe = document.getElementById('google-cal-iframe');
   var placeholder = document.getElementById('cal-placeholder');
