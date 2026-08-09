@@ -10,6 +10,22 @@ public_folder: "/images"
 # What teachers see in the left sidebar — keep these names simple and action-oriented
 collections:
 
+  # ── ENROLLMENT YEAR ──────────────────────────────────────────────────────────
+  - name: "site-settings"
+    label: "🗓️ Enrollment Year"
+    description: "One place to update the upcoming enrollment year shown across the Admissions & Enrollment pages (badges, headlines, application dates). Change it here once and it updates everywhere — no need to hunt through pages."
+    files:
+
+      - name: "site_settings"
+        label: "Upcoming Enrollment Year"
+        file: "_data/site-settings.json"
+        fields:
+
+          - label: "Upcoming Enrollment Year"
+            name: "enrollmentYear"
+            widget: "string"
+            hint: "The school year families are currently applying for. Example: 2026–2027. This updates every Admissions/Enrollment page automatically after you Publish."
+
   # ── BANNERS ──────────────────────────────────────────────────────────────────
   - name: "banners"
     label: "📢 Banners & Announcements"

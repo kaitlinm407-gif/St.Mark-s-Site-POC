@@ -74,16 +74,16 @@
   /* SOLID GRADIENT HERO */
   .hero.hero-solid-church { background: linear-gradient(135deg, #4A2E00 0%, var(--gold-dark) 55%, var(--gold) 100%); }
   .hero.hero-solid-school { background: linear-gradient(135deg, #160440 0%, var(--navy) 55%, var(--navy-mid) 100%); }
-  .solid-cross { position: absolute; left: 2%; top: 50%; transform: translateY(-50%); font-size: 340px; font-family: Georgia, serif; color: rgba(255,255,255,0.07); line-height: 1; pointer-events: none; user-select: none; }
-  .solid-fleur { position: absolute; left: 2%; top: 50%; transform: translateY(-50%); font-size: 340px; font-family: Georgia, serif; color: rgba(255,255,255,0.07); line-height: 1; pointer-events: none; user-select: none; }
+  .solid-cross { position: absolute; left: 2%; top: 50%; transform: translateY(-50%); font-size: 190px; font-family: Georgia, serif; color: rgba(255,255,255,0.07); line-height: 1; pointer-events: none; user-select: none; }
+  .solid-fleur { position: absolute; left: 2%; top: 50%; transform: translateY(-50%); font-size: 190px; font-family: Georgia, serif; color: rgba(255,255,255,0.07); line-height: 1; pointer-events: none; user-select: none; }
 
   /* HERO */
   .hero { background: var(--navy); position: relative; overflow: hidden; padding: 80px 2rem 72px; text-align: center; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #3D1472 0%, #4E1A8A 60%, #3A1268 100%); }
   .hero-cross { position: absolute; right: 6%; top: 50%; transform: translateY(-50%); opacity: 0.06; font-size: 280px; font-family: serif; color: #fff; line-height: 1; pointer-events: none; user-select: none; }
-  .hero-badge { display: inline-block; background: rgba(181,137,42,0.15); border: 1px solid rgba(181,137,42,0.4); color: var(--gold-light); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 22px; }
-  .hero-title { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 16px; text-shadow: 0 2px 16px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.6); }
-  .hero-sub { font-family: 'Montserrat', sans-serif; font-size: 17px; color: #fff; font-weight: 300; line-height: 1.6; margin-bottom: 36px; text-shadow: 0 1px 12px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.6); }
+  .hero-badge { display: inline-block; background: rgba(181,137,42,0.15); border: 1px solid rgba(181,137,42,0.4); color: var(--gold-light); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  .hero-title { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 8px; text-shadow: 0 2px 16px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.6); }
+  .hero-sub { font-family: 'Montserrat', sans-serif; font-size: 15px; color: #fff; font-weight: 300; line-height: 1.5; margin-bottom: 20px; text-shadow: 0 1px 12px rgba(0,0,0,0.75), 0 1px 4px rgba(0,0,0,0.6); }
   .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn-primary { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: #fff; font-weight: 700; font-size: 14px; padding: 13px 30px; border-radius: 6px; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; border: none; box-shadow: 0 2px 10px rgba(61,20,114,0.4), inset 0 1px 0 rgba(255,255,255,0.15); transition: all 0.2s ease; }
   .btn-primary:hover { background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%); box-shadow: 0 5px 18px rgba(61,20,114,0.5), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); color: #fff; }
@@ -291,7 +291,7 @@
     .util-bar { display: none; }
     .fleur-lg { font-size: 26px !important; }
     .nav { height: 72px; padding: 0 1.25rem; }
-    .nav-logo img { height: 56px !important; }
+    .nav-logo img { height: 66px !important; }
     .nav-links { display: none !important; }
     .hamburger { display: flex; }
     .hero.hero-photo { padding: 80px 1.25rem 60px !important; }
@@ -319,18 +319,21 @@
 
   <!-- CHURCH HEADER -->
   <div id="header-church">
-    <div class="util-bar" style="justify-content:flex-end;">
+    <div class="util-bar">
+      <div class="util-left">
+        <a class="util-link" href="https://www.lcms.org/" target="_blank" style="padding-left:0;">Member of the Lutheran Church&ndash;Missouri Synod</a>
+      </div>
       <div class="util-right">
         <span class="util-link" onclick="showPage('school')">School</span>
         <span class="util-sep">|</span>
-        <a class="util-link" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">Watch Live</a>
+        <a class="util-link" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:inline-flex; align-items:center; gap:5px;"><span style="display:inline-flex; align-items:center; justify-content:center; background:#fff; border-radius:3px; padding:2px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>Watch Live</a>
         <span class="util-sep">|</span>
         <span class="util-link" onclick="showPage('contact')">Contact</span>
       </div>
     </div>
     <nav class="nav">
       <div class="nav-logo" onclick="showPage('home')">
-        <img src="images/New Logo Design 4 Transparent.png" alt="St. Mark's Lutheran School" style="height:108px; width:auto; display:block;" />
+        <img src="images/New Logo Design - Final 2.png" alt="St. Mark's Lutheran School" style="height:120px; width:auto; display:block;" />
       </div>
       <div class="nav-links">
         <div class="nav-item">
@@ -388,7 +391,10 @@
 
   <!-- SCHOOL HEADER -->
   <div id="header-school" style="display:none;">
-    <div class="util-bar" style="justify-content:flex-end;">
+    <div class="util-bar">
+      <div class="util-left">
+        <a class="util-link" href="https://www.lcms.org/" target="_blank" style="padding-left:0;">Member of the Lutheran Church&ndash;Missouri Synod</a>
+      </div>
       <div class="util-right">
         <span class="util-link" onclick="showPage('home')">Church Site</span>
         <span class="util-sep">|</span>
@@ -399,7 +405,7 @@
     </div>
     <nav class="nav">
       <div class="nav-logo" onclick="showPage('school')">
-        <img src="images/New Logo Design 4 Transparent.png" alt="St. Mark's Lutheran School" style="height:108px; width:auto; display:block;" />
+        <img src="images/New Logo Design - Final 2.png" alt="St. Mark's Lutheran School" style="height:120px; width:auto; display:block;" />
       </div>
       <div class="nav-links">
         <div class="nav-item">
@@ -489,9 +495,9 @@
       <h1 class="hero-title" style="font-size:50px; font-weight:400; line-height:1.1; text-align:left; margin-bottom:0;">Living and Sharing Christ's Unconditional Love through Word and Sacraments.</h1>
       <div class="hero-actions" style="margin-top:32px; justify-content:flex-start;">
         <button class="btn-primary" onclick="showPage('new')">Plan Your First Visit</button>
-        <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="background:#fff; color:var(--gold-dark); border-color:#fff;">Watch Live</a>
+        <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="background:#fff; color:var(--gold-dark); border-color:#fff; display:inline-flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Watch Live</a>
       </div>
-      <p style="margin-top:18px; font-size:13px; color:rgba(255,255,255,0.75);">📍 5849 Buckwheat Rd, Milford, OH &nbsp;&middot;&nbsp; Sundays 8:00 &amp; 10:30am</p>
+      <p style="margin-top:18px; font-size:13px; color:rgba(255,255,255,0.75);">📍 <a href="https://www.google.com/maps/search/?api=1&query=5849+Buckwheat+Rd,+Milford,+OH+45150" target="_blank" style="color:inherit; text-decoration:underline;">5849 Buckwheat Rd, Milford, OH</a> &nbsp;&middot;&nbsp; Sundays 8:00 &amp; 10:30am</p>
     </div>
   </div>
 
@@ -532,7 +538,7 @@
         <div class="card">
           <div class="card-icon">⛪</div>
           <div class="card-title">Sunday Worship</div>
-          <p class="card-body">Join us every Sunday at 10:00am for a service rooted in Scripture, sacrament, and song. Services are also live-streamed on YouTube.</p>
+          <p class="card-body">Join us every Sunday at 8:00 or 10:30am for a service rooted in Scripture, sacrament, and song. Services are also live-streamed on YouTube.</p>
         </div>
         <div class="card">
           <div class="card-icon">📚</div>
@@ -599,14 +605,14 @@
 
 <!-- CHURCH PAGE -->
 <div id="page-church" class="page">
-  <div class="hero hero-photo" style="padding:130px 2rem 120px; background-image: url('images/church photo.jpg'); background-position: center 30%;">
+  <div class="hero hero-photo" style="padding:56px 2rem 48px; background-image: url('images/church photo.jpg'); background-position: center 30%;">
     <div class="hero-overlay-warm"></div>
     <div class="hero-content">
       <h1 class="hero-title" style="font-size:42px;">St. Mark's Lutheran Church</h1>
       <p class="hero-sub">A "Church of the open Bible" — teaching God's inspired and inerrant Word since our founding.</p>
       <div class="hero-actions" style="margin-top:32px;">
         <span class="btn-primary" onclick="showPage('contact')">Plan Your Visit</span>
-        <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">Watch Live</a>
+        <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:inline-flex; align-items:center; gap:8px;"><span style="display:inline-flex; align-items:center; justify-content:center; background:#fff; border-radius:4px; padding:3px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>Watch Live</a>
       </div>
     </div>
   </div>
@@ -645,13 +651,13 @@
 
 <!-- SCHOOL PAGE -->
 <div id="page-school" class="page">
-  <div class="hero hero-photo" style="padding:160px 2rem 110px; background-image: url('images/st mark school.jpg'); background-position: center 30%; background-size: 100%; background-repeat: no-repeat;">
+  <div class="hero hero-photo" style="padding:60px 2rem 48px; background-image: url('images/st mark school.jpg'); background-position: center 30%; background-size: 100%; background-repeat: no-repeat;">
     <div class="hero-overlay-diag-navy"></div>
     <div class="hero-content" style="margin:0; max-width:580px; text-align:left;">
       <h1 class="hero-title" style="font-size:50px; font-weight:400; line-height:1.1; text-align:left; margin-bottom:0;">Connecting students with Jesus while providing excellence in education.</h1>
       <div class="hero-actions" style="margin-top:32px; justify-content:flex-start;">
         <span class="btn-primary" onclick="showPage('contact')" style="background:linear-gradient(135deg,var(--gold-dark),var(--gold)); box-shadow:0 2px 10px rgba(184,146,42,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">Schedule a Tour</span>
-        <a class="btn-outline" href="https://stmarksmilford.org/?page_id=299" target="_blank" style="background:#fff; color:var(--navy); border-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15);">Admissions Info</a>
+        <span class="btn-outline" onclick="showPage('admissions')" style="background:#fff; color:var(--navy); border-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15);">Admissions Info</span>
       </div>
     </div>
   </div>
@@ -757,7 +763,7 @@
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
-        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://stmarksmilford.org/?page_id=299" target="_blank">Admissions</a>
+        <span class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" onclick="showPage('admissions')">Admissions</span>
       </div>
     </div>
   </div>
@@ -765,7 +771,7 @@
 
 <!-- CONTACT PAGE -->
 <div id="page-contact" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">We'd love to hear from you</div>
@@ -776,26 +782,26 @@
 
   <div class="section">
     <div class="contact-grid" style="margin-bottom:32px;">
-      <div class="contact-card">
+      <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=5849+Buckwheat+Rd,+Milford,+OH+45150" target="_blank" style="display:block; text-decoration:none; color:inherit;">
         <div class="contact-label">📍 Address</div>
         <div class="contact-value">5849 Buckwheat Rd.</div>
         <div class="contact-sub">Milford, OH 45150</div>
-      </div>
-      <div class="contact-card">
+      </a>
+      <a class="contact-card" href="mailto:stmarksmilford@hotmail.com" style="display:block; text-decoration:none; color:inherit;">
         <div class="contact-label">✉️ Email</div>
         <div class="contact-value" style="font-size:14px;">stmarksmilford@hotmail.com</div>
         <div class="contact-sub">We'll respond as soon as possible</div>
-      </div>
-      <div class="contact-card">
+      </a>
+      <a class="contact-card" href="tel:5135750292" style="display:block; text-decoration:none; color:inherit;">
         <div class="contact-label">📞 Church Office</div>
         <div class="contact-value">(513) 575-0292</div>
         <div class="contact-sub">Church inquiries & pastoral care</div>
-      </div>
-      <div class="contact-card">
+      </a>
+      <a class="contact-card" href="tel:5135753354" style="display:block; text-decoration:none; color:inherit;">
         <div class="contact-label">📞 School Office</div>
         <div class="contact-value">(513) 575-3354</div>
         <div class="contact-sub">Enrollment, tuition, daily school matters</div>
-      </div>
+      </a>
     </div>
 
     <div class="two-col" style="margin-top:48px; align-items:start;">
@@ -805,7 +811,7 @@
         <div class="divider"></div>
         <a class="card" style="display:block; margin-bottom:16px; text-decoration:none;" href="https://www.facebook.com/stmarksmilford/" target="_blank">
           <div style="display:flex; align-items:center; gap:14px;">
-            <div style="font-size:28px;">📘</div>
+            <div style="line-height:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
             <div>
               <div class="card-title" style="font-size:15px; margin-bottom:3px;">Facebook</div>
               <p class="card-body" style="font-size:13px;">News, announcements, and community updates</p>
@@ -814,7 +820,7 @@
         </a>
         <a class="card" style="display:block; text-decoration:none;" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">
           <div style="display:flex; align-items:center; gap:14px;">
-            <div style="font-size:28px;">▶️</div>
+            <div style="line-height:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
             <div>
               <div class="card-title" style="font-size:15px; margin-bottom:3px;">YouTube</div>
               <p class="card-body" style="font-size:13px;">Live-streamed & archived Sunday services</p>
@@ -846,7 +852,7 @@
 <!-- I'M NEW PAGE -->
 <div id="page-new" class="page">
 
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">First Time Here?</div>
@@ -965,7 +971,7 @@
         <p class="section-body" style="font-size:15px;">No matter where you are on your faith journey — skeptic, seeker, or lifelong Lutheran — there is a place for you here. Bring your questions, your doubts, and your hopes. You'll find a family of faith ready to walk alongside you.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
           <button class="btn-primary" onclick="showPage('contact')">Plan Your Visit</button>
-          <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">Watch Online</a>
+          <a class="btn-outline" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:inline-flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Watch Online</a>
         </div>
       </div>
     </div>
@@ -981,7 +987,7 @@
           <div class="section-label">All Messages</div>
           <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:12px;">Our Full Sermon Archive</h3>
           <p style="font-size:14px; color:var(--text-mid); line-height:1.65; margin-bottom:20px;">Every Sunday service is recorded and uploaded to our YouTube channel. Listen to past sermons anytime — on any device, anywhere in the world.</p>
-          <a class="btn-primary" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">View All on YouTube</a>
+          <a class="btn-primary" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:inline-flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>View All on YouTube</a>
         </div>
       </div>
     </div>
@@ -994,8 +1000,8 @@
         <p style="font-size:14px; color:var(--text-mid); max-width:420px;">All Sunday services are livestreamed and archived on our YouTube channel and Facebook page. Join us from anywhere, anytime.</p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn-primary" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">Watch on YouTube</a>
-        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://www.facebook.com/stmarksmilford/" target="_blank">Find Us on Facebook</a>
+        <a class="btn-primary" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:inline-flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Watch on YouTube</a>
+        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2); display:inline-flex; align-items:center; gap:8px;" href="https://www.facebook.com/stmarksmilford/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Find Us on Facebook</a>
       </div>
     </div>
 
@@ -1004,7 +1010,7 @@
 
 <!-- OUR BELIEFS PAGE -->
 <div id="page-beliefs" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Lutheran Church &mdash; Missouri Synod</div>
@@ -1096,7 +1102,7 @@
 <!-- OUR HISTORY PAGE -->
 <div id="page-history" class="page">
 
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Est. 1958 &middot; Milford, Ohio</div>
@@ -1213,7 +1219,7 @@
 
 <!-- STAFF PAGE -->
 <div id="page-staff" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran Church</div>
@@ -1292,7 +1298,7 @@
 
 <!-- CONNECT: LANDING PAGE -->
 <div id="page-connect" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Community &amp; Ministry</div>
@@ -1348,7 +1354,7 @@
 
 <!-- CONNECT: CHILDREN & YOUTH -->
 <div id="page-connect-children" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Connect at St. Mark's</div>
@@ -1476,7 +1482,7 @@
 
 <!-- CONNECT: COLLEGE & YOUNG ADULTS -->
 <div id="page-connect-college" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Connect at St. Mark's</div>
@@ -1528,7 +1534,7 @@
 
 <!-- CONNECT: ADULTS -->
 <div id="page-connect-adults" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Connect at St. Mark's</div>
@@ -1572,7 +1578,7 @@
 
 <!-- CONNECT: GROUPS & CLASSES -->
 <div id="page-connect-groups" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Connect at St. Mark's</div>
@@ -1647,7 +1653,7 @@
 
 <!-- SCHOOL ABOUT: LANDING PAGE -->
 <div id="page-school-about" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -1683,7 +1689,7 @@
 <!-- SCHOOL STAFF PAGE -->
 <!-- SCHOOL HISTORY PAGE -->
 <div id="page-school-history" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -1747,7 +1753,7 @@
 </div>
 
 <div id="page-school-staff" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -1772,7 +1778,7 @@
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
-        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://stmarksmilford.org/?page_id=299" target="_blank">Admissions</a>
+        <span class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" onclick="showPage('admissions')">Admissions</span>
       </div>
     </div>
 
@@ -1781,7 +1787,7 @@
 
 <!-- TUITION & FEES PAGE -->
 <div id="page-tuition" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -1909,7 +1915,7 @@
 
 <!-- SERVE PAGE -->
 <div id="page-serve" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Serve at St. Mark's</div>
@@ -1955,7 +1961,7 @@
 
 <!-- EVENTS PAGE -->
 <div id="page-events" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran Church</div>
@@ -2078,7 +2084,7 @@
           <div class="divider"></div>
           <p class="section-body" style="font-size:13px;">The most up-to-date info is on our Facebook page and in the St. Mark's Messenger newsletter.</p>
           <div style="display:flex; flex-direction:column; gap:10px; margin-top:4px;">
-            <a class="btn-primary" href="https://www.facebook.com/stmarksmilford/" target="_blank" style="text-align:center;">Follow on Facebook</a>
+            <a class="btn-primary" href="https://www.facebook.com/stmarksmilford/" target="_blank" style="text-align:center; display:inline-flex; align-items:center; justify-content:center; gap:8px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Follow on Facebook</a>
             <button class="btn-outline" onclick="showPage('messenger')" style="text-align:center;">Read the Newsletter</button>
           </div>
         </div>
@@ -2100,7 +2106,7 @@
 
 <!-- NEWS PAGE -->
 <div id="page-news" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran Church</div>
@@ -2136,8 +2142,8 @@
         <p style="font-size:14px; color:var(--text-mid);">News, announcements, and community updates posted regularly on Facebook.</p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn-primary" href="https://www.facebook.com/stmarksmilford/" target="_blank">Facebook</a>
-        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">YouTube</a>
+        <a class="btn-primary" href="https://www.facebook.com/stmarksmilford/" target="_blank" style="display:inline-flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2); display:inline-flex; align-items:center; gap:8px;" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
       </div>
     </div>
   </div>
@@ -2145,7 +2151,7 @@
 
 <!-- MESSENGER PAGE -->
 <div id="page-messenger" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <h1 class="hero-title">The St. Mark's Messenger</h1>
@@ -2178,7 +2184,7 @@
         <div id="messenger-list" style="display:flex; flex-direction:column; gap:4px; max-height:480px; overflow-y:auto;"></div>
 
         <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border);">
-          <a href="https://www.facebook.com/stmarksmilford/" target="_blank" style="font-size:13px; color:var(--gold-dark); font-weight:700; text-decoration:none;">📘 Follow on Facebook for new issues</a>
+          <a href="https://www.facebook.com/stmarksmilford/" target="_blank" style="font-size:13px; color:var(--gold-dark); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Follow on Facebook for new issues</a>
         </div>
       </div>
 
@@ -2206,7 +2212,7 @@
 
 <!-- GIVE PAGE -->
 <div id="page-give" class="page">
-  <div class="hero hero-solid-church" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-cross">&#x271D;</div>
     <div class="hero-content">
       <div class="hero-badge">Generosity &amp; Stewardship</div>
@@ -2253,7 +2259,7 @@
 
 <!-- EXTENDED CARE PAGE -->
 <div id="page-extended-care" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -2336,7 +2342,7 @@
 
 <!-- PRESCHOOL PAGE -->
 <div id="page-preschool" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -2393,14 +2399,14 @@
     <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
       <button class="btn-primary" onclick="showPage('contact')">Schedule a Visit</button>
       <button class="btn-primary" onclick="showPage('tuition')" style="background:var(--gold);">Full Tuition Info</button>
-      <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://stmarksmilford.org/?page_id=299" target="_blank">Enroll Now</a>
+      <span class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" onclick="showPage('admissions')">Enroll Now</span>
     </div>
   </div>
 </div>
 
 <!-- ACADEMICS: LANDING PAGE -->
 <div id="page-academics" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -2438,7 +2444,7 @@
 <!-- ACADEMICS PAGE -->
 <!-- ACADEMICS: CURRICULUM -->
 <div id="page-academics-curriculum" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Academics</div>
@@ -2515,7 +2521,7 @@
 <!-- ACADEMICS: PROGRAMS & GRADES -->
 <!-- ACADEMICS: FAITH INTEGRATION -->
 <div id="page-academics-faith" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Academics</div>
@@ -2556,7 +2562,7 @@
 
 <!-- CURRENT FAMILIES PAGE -->
 <div id="page-current-families" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Lutheran School</div>
@@ -2634,7 +2640,7 @@
 
 <!-- SUPPLY LIST — content rendered from SUPPLY_LIST_GRADES in the script below -->
 <div id="page-supply-list" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge" id="supply-list-badge">Supply Lists</div>
@@ -2664,7 +2670,7 @@
 
 <!-- EXTRACURRICULAR: LANDING PAGE -->
 <div id="page-extracurricular" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
@@ -2701,7 +2707,7 @@
 
 <!-- EXTRACURRICULAR: ACTIVITIES & CLUBS -->
 <div id="page-extracurricular-activities" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
@@ -2825,7 +2831,7 @@
 
 <!-- EXTRACURRICULAR: SPORTS -->
 <div id="page-extracurricular-sports" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">St. Mark's Saints</div>
@@ -2886,7 +2892,7 @@
 
 <!-- EXTRACURRICULAR: FINE ARTS -->
 <div id="page-extracurricular-arts" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <div class="hero-badge">Beyond the Classroom</div>
@@ -2942,10 +2948,10 @@
 
 <!-- ADMISSIONS: LANDING PAGE -->
 <div id="page-admissions" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
-      <div class="hero-badge">2026–2027 Enrollment</div>
+      <div class="hero-badge"><span class="enrollment-year">2026–2027</span> Enrollment</div>
       <h1 class="hero-title">Admissions</h1>
       <p class="hero-sub">We'd love to welcome your family. Here's everything you need to know about joining St. Mark's.</p>
     </div>
@@ -2961,7 +2967,7 @@
       <div class="card" style="cursor:pointer;" onclick="showPage('enroll')">
         <div class="card-icon">✏️</div>
         <div class="card-title">Enroll Now</div>
-        <p class="card-body">Walk through our seven-step admissions process and learn how to apply for the 2026–2027 school year.</p>
+        <p class="card-body">Walk through our seven-step admissions process and learn how to apply for the <span class="enrollment-year">2026–2027</span> school year.</p>
       </div>
       <div class="card" style="cursor:pointer;" onclick="showPage('tuition')">
         <div class="card-icon">💰</div>
@@ -2984,10 +2990,10 @@
 
 <!-- ENROLL PAGE -->
 <div id="page-enroll" class="page">
-  <div class="hero hero-solid-school" style="padding:90px 2rem 80px; text-align:center;">
+  <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
-      <div class="hero-badge">Admissions 2026–2027</div>
+      <div class="hero-badge">Admissions <span class="enrollment-year">2026–2027</span></div>
       <h1 class="hero-title">Enroll at St. Mark's</h1>
       <p class="hero-sub">We'd love to welcome your family. Here's everything you need to know about joining St. Mark's Lutheran School.</p>
     </div>
@@ -3000,7 +3006,7 @@
       <div class="section-label">Admissions</div>
       <h2 class="section-title">A Seven-Step Process</h2>
       <div class="divider" style="margin:16px auto 24px;"></div>
-      <p class="section-body">Our admissions process is designed to help you get to know St. Mark's — and help us get to know your family. Applications for the 2026–2027 school year open <strong>January 25th, 2026</strong>.</p>
+      <p class="section-body">Our admissions process is designed to help you get to know St. Mark's — and help us get to know your family. Applications for the <span class="enrollment-year">2026–2027</span> school year open <strong>January 25th, 2026</strong>.</p>
     </div>
 
     <!-- Steps -->
@@ -3029,7 +3035,7 @@
         <div class="timeline-item">
           <div class="timeline-date">Step 4</div>
           <div class="timeline-title">Submit Your Application</div>
-          <div class="timeline-body">St. Mark's officially opens applications for the <strong>2026–2027 school year beginning January 25th, 2026</strong>. A non-refundable <strong>$25 application fee</strong> is required at the time of submission. The application fee is separate from the enrollment fee charged upon acceptance.</div>
+          <div class="timeline-body">St. Mark's officially opens applications for the <strong><span class="enrollment-year">2026–2027</span> school year beginning January 25th, 2026</strong>. A non-refundable <strong>$25 application fee</strong> is required at the time of submission. The application fee is separate from the enrollment fee charged upon acceptance.</div>
         </div>
 
         <div class="timeline-item">
@@ -3062,7 +3068,7 @@
       <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:20px;">2025–2026 Admissions Calendar</h3>
       <div class="service-row" style="padding:12px 0;"><div class="service-day">Jan 1</div><div class="service-info"><strong>Re-enrollment opens</strong>For currently enrolled returning students</div></div>
       <div class="service-row" style="padding:12px 0;"><div class="service-day">Jan 26</div><div class="service-info"><strong>Open House</strong>1:00–3:00 PM — campus tours and faculty introductions</div></div>
-      <div class="service-row" style="padding:12px 0;"><div class="service-day">Jan 25</div><div class="service-info"><strong>Applications open</strong>For new students for the 2026–2027 school year</div></div>
+      <div class="service-row" style="padding:12px 0;"><div class="service-day">Jan 25</div><div class="service-info"><strong>Applications open</strong>For new students for the <span class="enrollment-year">2026–2027</span> school year</div></div>
       <div class="service-row" style="padding:12px 0; border-bottom:none;"><div class="service-day">Ongoing</div><div class="service-info"><strong>Shadow days available</strong>Contact Rachel Bailey to schedule your child's visit</div></div>
     </div>
 
@@ -3089,7 +3095,7 @@
       <div>
         <div class="footer-brand">St. Mark's Lutheran Church & School</div>
         <p class="footer-tagline">Living and Sharing Christ's Unconditional Love through Word and Sacraments.</p>
-        <div class="footer-address">5849 Buckwheat Rd.<br>Milford, OH 45150<br><br>Church: (513) 575-0292<br>School: (513) 575-3354</div>
+        <div class="footer-address"><a class="footer-link" href="https://www.google.com/maps/search/?api=1&query=5849+Buckwheat+Rd,+Milford,+OH+45150" target="_blank" style="display:inline; margin:0;">5849 Buckwheat Rd.<br>Milford, OH 45150</a><br><br>Church: <a class="footer-link" href="tel:5135750292" style="display:inline; margin:0;">(513) 575-0292</a><br>School: <a class="footer-link" href="tel:5135753354" style="display:inline; margin:0;">(513) 575-3354</a></div>
       </div>
       <div>
         <div class="footer-col-title">Church</div>
@@ -3101,7 +3107,7 @@
       <div>
         <div class="footer-col-title">School</div>
         <span class="footer-link" onclick="showPage('school')">About Our School</span>
-        <a class="footer-link" href="https://stmarksmilford.org/?page_id=299" target="_blank">Admissions</a>
+        <span class="footer-link" onclick="showPage('admissions')">Admissions</span>
         <span class="footer-link" onclick="showPage('tuition')">Tuition & Fees</span>
         <a class="footer-link" href="https://stmarksmilford.org/?page_id=397" target="_blank">Extracurriculars</a>
         <a class="footer-link" href="https://factsmgt.com/login/" target="_blank">School Payment</a>
@@ -3109,8 +3115,8 @@
       <div>
         <div class="footer-col-title">Connect</div>
         <span class="footer-link" onclick="showPage('contact')">Contact Us</span>
-        <a class="footer-link" href="https://www.facebook.com/stmarksmilford/" target="_blank">Facebook</a>
-        <a class="footer-link" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">YouTube</a>
+        <a class="footer-link" href="https://www.facebook.com/stmarksmilford/" target="_blank" style="display:flex; align-items:center; gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank" style="display:flex; align-items:center; gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.06 31.06 0 0 0 0 12a31.06 31.06 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.06 31.06 0 0 0 24 12a31.06 31.06 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
         <a class="footer-link" href="https://www.lcms.org/" target="_blank">LCMS.org</a>
         <a class="footer-link" href="https://VBSPRO.EVENTS/P/STMARKSRF" target="_blank">VBS Registration</a>
       </div>
@@ -3702,6 +3708,16 @@ function loadBanner() {
     .catch(function() {});
 }
 loadBanner();
+
+function loadEnrollmentYear() {
+  fetch('/_data/site-settings.json?t=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(s) {
+      document.querySelectorAll('.enrollment-year').forEach(function(el) { el.textContent = s.enrollmentYear; });
+    })
+    .catch(function() {});
+}
+loadEnrollmentYear();
 
 function toggleMenu(which) {
   var btn = document.getElementById('hamburger-' + which);
