@@ -10,26 +10,49 @@ public_folder: "/images"
 # What teachers see in the left sidebar — keep these names simple and action-oriented
 collections:
 
-  # ── ENROLLMENT YEAR ──────────────────────────────────────────────────────────
+  # ── KEY DATES & SCHOOL YEAR ───────────────────────────────────────────────────
   - name: "site-settings"
-    label: "🗓️ Enrollment Year"
-    description: "One place to update the upcoming enrollment year shown across the Admissions & Enrollment pages (badges, headlines, application dates). Change it here once and it updates everywhere — no need to hunt through pages."
+    label: "🗓️ Key Dates & School Year"
+    description: "One place to update the school year and admissions dates shown across the whole website — banners, supply lists, and Admissions/Enrollment pages. Change it here once and it updates everywhere — no need to hunt through pages."
     files:
 
       - name: "site_settings"
-        label: "Upcoming Enrollment Year"
+        label: "Key Dates & School Year"
         file: "_data/site-settings.json"
         fields:
+
+          - label: "Current School Year"
+            name: "currentSchoolYear"
+            widget: "string"
+            hint: "The school year currently in session. Shown on the Re-Enrollment banner and the Supply List page. Example: 2025–2026"
 
           - label: "Upcoming Enrollment Year"
             name: "enrollmentYear"
             widget: "string"
-            hint: "The school year families are currently applying for. Example: 2026–2027. This updates every Admissions/Enrollment page automatically after you Publish."
+            hint: "The school year new families are applying for. Shown on the Admissions & Enrollment pages. Example: 2026–2027"
+
+          - label: "Open House Date"
+            name: "openHouseDate"
+            widget: "date"
+            date_format: "YYYY-MM-DD"
+            hint: "The date of the school's Open House event. Updates the Events page, Tuition page, and Admissions Key Dates automatically."
+
+          - label: "New Student Applications Open Date"
+            name: "enrollmentOpenDate"
+            widget: "date"
+            date_format: "YYYY-MM-DD"
+            hint: "The date new-student applications open. Updates the Admissions pages automatically."
+
+          - label: "Re-Enrollment Open Date"
+            name: "reenrollmentOpenDate"
+            widget: "date"
+            date_format: "YYYY-MM-DD"
+            hint: "The date re-enrollment opens for currently enrolled, returning students. Updates the Tuition, Events, and Key Dates pages automatically."
 
   # ── BANNERS ──────────────────────────────────────────────────────────────────
   - name: "banners"
     label: "📢 Banners & Announcements"
-    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish."
+    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish. (The school year shown on the banner is now controlled from 🗓️ Key Dates & School Year.)"
     files:
 
       - name: "reenrollment"
@@ -42,11 +65,6 @@ collections:
             widget: "boolean"
             default: false
             hint: "✅ ON = banner is visible to families. ❌ OFF = banner is hidden. Remember to click Publish after changing."
-
-          - label: "School Year"
-            name: "year"
-            widget: "string"
-            hint: "Shown at the top of the banner. Example: 2026–2027"
 
           - label: "Banner Headline"
             name: "headline"
@@ -76,18 +94,13 @@ collections:
   # ── SUPPLY LISTS ─────────────────────────────────────────────────────────────
   - name: "supply-list"
     label: "🎒 Supply Lists"
-    description: "Update the classroom supply list each summer. You can add, remove, or edit items for any grade."
+    description: "Update the classroom supply list each summer. You can add, remove, or edit items for any grade. (The school year shown on this page is now controlled from 🗓️ Key Dates & School Year.)"
     files:
 
       - name: "supply_list"
         label: "Classroom Supply Lists"
         file: "_data/supply-list.json"
         fields:
-
-          - label: "School Year"
-            name: "year"
-            widget: "string"
-            hint: "Shown at the top of the supply list page. Example: 2026–2027"
 
           - label: "Grades"
             name: "grades"
