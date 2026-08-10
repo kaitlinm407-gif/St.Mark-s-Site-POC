@@ -1,12 +1,96 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>St. Mark's — Content Manager</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>St. Mark's — Website Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF9F7;
+    --warm-white: #FFFDF9;
+    --gold: #B8922A;
+    --gold-light: #E8D59A;
+    --gold-dark: #8A6A18;
+    --navy: #3D1472;
+    --navy-mid: #5A2A9E;
+    --text-dark: #1A1A2E;
+    --text-mid: #4A4860;
+    --border: rgba(61,20,114,0.15);
+  }
+  body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--text-dark); min-height: 100vh; }
+
+  .header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 48px 2rem 56px; text-align: center; color: #fff; }
+  .header img { height: 64px; width: auto; margin-bottom: 18px; }
+  .header h1 { font-size: 28px; font-weight: 400; margin-bottom: 8px; }
+  .header p { font-size: 14px; color: rgba(255,255,255,0.75); }
+
+  .wrap { max-width: 900px; margin: -32px auto 0; padding: 0 2rem 64px; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+  .card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 4px 20px rgba(61,20,114,0.08); text-decoration: none; color: inherit; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(61,20,114,0.16); }
+  .card-icon { font-size: 28px; margin-bottom: 14px; }
+  .card-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .card-body { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 16px; }
+  .card-cta { font-size: 12px; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.05em; }
+  .card-cta::after { content: ' →'; }
+
+  .footer-row { margin-top: 32px; text-align: center; }
+  .footer-row a { display: inline-block; font-size: 13px; font-weight: 600; color: var(--navy); text-decoration: none; padding: 10px 20px; border: 1.5px solid var(--border); border-radius: 6px; transition: background 0.2s ease; }
+  .footer-row a:hover { background: var(--warm-white); }
+</style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <div class="header">
+    <img src="../images/New Logo Design - Final 2.png" alt="St. Mark's Lutheran Church & School" />
+    <h1>Website Editor</h1>
+    <p>Choose what you'd like to update. Changes go live within about a minute of clicking Publish.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="grid">
+
+      <a class="card" href="cms.html#/collections/site-settings/entries/site_settings">
+        <div class="card-icon">🗓️</div>
+        <div class="card-title">Key Dates &amp; School Year</div>
+        <p class="card-body">Update the current school year, upcoming enrollment year, Open House date, and application dates — changes apply across the whole site automatically.</p>
+        <div class="card-cta">Edit</div>
+      </a>
+
+      <a class="card" href="cms.html#/collections/banners/entries/reenrollment">
+        <div class="card-icon">📢</div>
+        <div class="card-title">Banners &amp; Announcements</div>
+        <p class="card-body">Turn the re-enrollment banner on or off and update its headline, description, deadline, and button.</p>
+        <div class="card-cta">Edit</div>
+      </a>
+
+      <a class="card" href="cms.html#/collections/supply-list/entries/supply_list">
+        <div class="card-icon">🎒</div>
+        <div class="card-title">Supply Lists</div>
+        <p class="card-body">Add, remove, or edit classroom supply list items for any grade, Preschool through 8th.</p>
+        <div class="card-cta">Edit</div>
+      </a>
+
+      <a class="card" href="cms.html#/collections/staff/entries/staff_list">
+        <div class="card-icon">👩‍🏫</div>
+        <div class="card-title">Staff Directory</div>
+        <p class="card-body">Add, remove, or update faculty and staff members shown on the Faculty &amp; Staff page and the family contact directory.</p>
+        <div class="card-cta">Edit</div>
+      </a>
+
+    </div>
+
+    <div class="footer-row">
+      <a href="cms.html">Open Full Editor →</a>
+      &nbsp;&nbsp;
+      <a href="../index.html">View Live Website ↗</a>
+    </div>
+  </div>
+
 </body>
 </html>

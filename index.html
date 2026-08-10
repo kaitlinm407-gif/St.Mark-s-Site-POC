@@ -106,6 +106,22 @@
   .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
   .card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 8px; padding: 28px 24px; }
 
+  /* OFFER SPLIT (homepage "What We Offer" — dark editorial band) */
+  .offer-split-wrap { background:linear-gradient(135deg,#160440 0%,var(--navy) 55%,var(--navy-mid) 100%); }
+  .offer-split { display:grid; grid-template-columns:1fr 1.4fr; gap:56px; align-items:center; }
+  @media (max-width: 780px) { .offer-split { grid-template-columns:1fr; gap:32px; } }
+  .offer-split-intro .section-label { color:var(--gold-light); }
+  .offer-split-intro h2 { font-family:'Montserrat',sans-serif; font-size:34px; font-weight:400; color:#fff; line-height:1.2; margin:10px 0 18px; }
+  .offer-split-intro .divider { margin:0 0 18px; background:var(--gold); width:52px; height:3px; }
+  .offer-split-intro p { font-size:14px; color:rgba(255,255,255,0.7); line-height:1.7; max-width:340px; }
+  .offer-list { display:flex; flex-direction:column; }
+  .offer-row { display:flex; align-items:flex-start; gap:20px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.12); }
+  .offer-row:last-child { border-bottom:none; padding-bottom:0; }
+  .offer-row:first-child { padding-top:0; }
+  .offer-row-icon { flex-shrink:0; width:48px; height:48px; border-radius:50%; background:#fff; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:20px; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+  .offer-row-title { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:#fff; margin-bottom:4px; }
+  .offer-row-body { font-size:14px; color:rgba(255,255,255,0.68); line-height:1.6; }
+
   /* EVENT CARDS */
   .event-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
   .event-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
@@ -243,6 +259,17 @@
   .timeline-date { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 4px; }
   .timeline-title { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
   .timeline-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+  .addition-feature { margin-right: calc(-100% - 48px); }
+  .addition-feature .timeline-title, .addition-feature .timeline-body { max-width: 620px; }
+  @media (max-width: 680px) { .addition-feature { margin-right: 0; } }
+  .addition-showcase { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 190px 150px; gap: 10px; max-width: 620px; }
+  .addition-photo { position: relative; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+  .addition-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .addition-photo:hover img { transform: scale(1.06); }
+  .addition-photo-featured { grid-column: 1 / 4; grid-row: 1; }
+  .addition-photo-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 8px 5px; font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.3; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%); }
+  .addition-photo-featured .addition-photo-label { font-size: 12px; padding: 12px 12px 9px; }
+  @media (max-width: 560px) { .addition-showcase { grid-template-columns: repeat(3, 1fr); grid-template-rows: 140px 110px; max-width: 100%; } }
 
   /* FOOTER */
   .footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 48px 2rem 24px; }
@@ -529,26 +556,44 @@
     </div>
   </div>
 
-  <div style="background: var(--warm-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="offer-split-wrap">
     <div class="section">
-      <div class="section-label" style="text-align:center;">What We Offer</div>
-      <h2 class="section-title" style="text-align:center; margin-bottom:8px;">Faith & Learning, Together</h2>
-      <div class="divider" style="margin:16px auto 36px;"></div>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon">⛪</div>
-          <div class="card-title">Sunday Worship</div>
-          <p class="card-body">Join us every Sunday at 8:00 or 10:30am for a service rooted in Scripture, sacrament, and song. Services are also live-streamed on YouTube.</p>
+      <div class="offer-split">
+        <div class="offer-split-intro">
+          <div class="section-label">What We Offer</div>
+          <h2>Faith &amp; Learning, Together</h2>
+          <div class="divider"></div>
+          <p>Four ways St. Mark's walks alongside your family — in worship, in the classroom, in faith formation, and in community.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📚</div>
-          <div class="card-title">K–8 Lutheran School</div>
-          <p class="card-body">A Christ-centered education that balances academic excellence with spiritual growth, from Preschool through 8th grade.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🤝</div>
-          <div class="card-title">Community & Fellowship</div>
-          <p class="card-body">Bible studies, youth activities, extended care, extracurriculars, and more — there's a place for every member of your family.</p>
+        <div class="offer-list">
+          <div class="offer-row">
+            <div class="offer-row-icon">⛪</div>
+            <div>
+              <div class="offer-row-title">Sunday Worship</div>
+              <p class="offer-row-body">Join us every Sunday at 8:00 or 10:30am for a service rooted in Scripture, sacrament, and song. Services are also live-streamed on YouTube.</p>
+            </div>
+          </div>
+          <div class="offer-row">
+            <div class="offer-row-icon">📚</div>
+            <div>
+              <div class="offer-row-title">K–8 Lutheran School</div>
+              <p class="offer-row-body">A Christ-centered education that balances academic excellence with spiritual growth, from Preschool through 8th grade.</p>
+            </div>
+          </div>
+          <div class="offer-row">
+            <div class="offer-row-icon">✝️</div>
+            <div>
+              <div class="offer-row-title">Christian Education &amp; Youth</div>
+              <p class="offer-row-body">Bible studies, Sunday School, and youth group activities that help all ages grow together in faith.</p>
+            </div>
+          </div>
+          <div class="offer-row">
+            <div class="offer-row-icon">🤝</div>
+            <div>
+              <div class="offer-row-title">Community &amp; Fellowship</div>
+              <p class="offer-row-body">Extended care, extracurriculars, fellowship events, and more — there's a place for every member of your family.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -748,11 +793,11 @@
     </div>
 
     <!-- Quick links -->
-    <div style="margin-top:32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px;">
+    <div class="two-col" style="margin-top:32px; gap:16px;">
       <button class="btn-primary" onclick="showPage('school-staff')" style="padding:16px; font-size:14px;">Meet Our Faculty &amp; Staff</button>
-      <button class="btn-primary" onclick="showPage('academics-curriculum')" style="padding:16px; font-size:14px; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); box-shadow:0 2px 10px rgba(184,146,42,0.4);">Explore Academics</button>
+      <button class="btn-primary" onclick="showPage('academics-curriculum')" style="padding:16px; font-size:14px;">Explore Academics</button>
       <button class="btn-primary" onclick="showPage('extracurricular')" style="padding:16px; font-size:14px;">Extracurriculars</button>
-      <button class="btn-primary" onclick="showPage('enroll')" style="padding:16px; font-size:14px; background:linear-gradient(135deg,var(--gold-dark),var(--gold)); box-shadow:0 2px 10px rgba(184,146,42,0.4);">Enroll Now</button>
+      <button class="btn-primary" onclick="showPage('enroll')" style="padding:16px; font-size:14px;">Enroll Now</button>
     </div>
 
     <div style="margin-top:48px; background:var(--warm-white); border:1px solid var(--border); border-radius:8px; padding:32px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
@@ -836,7 +881,7 @@
           <div class="service-info"><a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRvL1NC2iGCWhI5za5jJhQp_HO3iVYxvvxhHjRfLOeq662EvVVAEjqawDomKT1pboudm56g7ufp-_52zwUA8_VKo=" target="_blank" style="color:var(--navy); text-decoration:none;"><strong style="font-size:14px;">Donate to the Church</strong></a>Support our mission through a secure online gift.</div>
         </div>
         <div class="service-row" style="padding:14px 0;">
-          <div class="service-info"><a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbUbaqLA_Vc-vBNUoZQKQ-lyXHubq5Z7ap5JVmPErc4ZeeyHCKCZhESjGNQmZ5B-6dx8MmThPHVOIxJlaPzyD5J40=&ver=3" target="_blank" style="color:var(--navy); text-decoration:none;"><strong style="font-size:14px;">Donate to the School</strong></a>Support Christian education with a secure online gift.</div>
+          <div class="service-info"><a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRvL1NC2iGCWhI5za5jJhQp_HO3iVYxvvxhHjRfLOeq662EvVVAEjqawDomKT1pboudm56g7ufp-_52zwUA8_VKo=" target="_blank" style="color:var(--navy); text-decoration:none;"><strong style="font-size:14px;">Donate to the School</strong></a>Support Christian education with a secure online gift.</div>
         </div>
         <div class="service-row" style="padding:14px 0;">
           <div class="service-info"><a href="https://factsmgt.com/login/" target="_blank" style="color:var(--navy); text-decoration:none;"><strong style="font-size:14px;">Make a School Payment</strong></a>Log in to FACTS to make a tuition or fee payment.</div>
@@ -912,7 +957,7 @@
       </div>
     </div>
     <div style="text-align:center; padding:14px 20px; background:var(--cream); border-radius:8px; margin-bottom:20px; font-size:14px; color:var(--text-mid);">
-      📍 <strong style="color:var(--navy);">5849 Buckwheat Rd, Milford, OH 45150</strong> &nbsp;&middot;&nbsp; Free parking available in our lot
+      📍 <a href="https://www.google.com/maps/search/?api=1&query=5849+Buckwheat+Rd,+Milford,+OH+45150" target="_blank" style="color:var(--navy); font-weight:700; text-decoration:underline;">5849 Buckwheat Rd, Milford, OH 45150</a> &nbsp;&middot;&nbsp; Free parking available in our lot
     </div>
     <img src="images/st marks church building.jpg" alt="St. Mark's Lutheran Church building" style="width:100%; height:300px; object-fit:cover; object-position:center 40%; border-radius:10px; display:block; margin-bottom:56px; box-shadow:0 4px 20px rgba(0,0,0,0.1);" />
 
@@ -1172,6 +1217,29 @@
             <div class="timeline-title">A Thriving Congregation</div>
             <div class="timeline-body">St. Mark's reported 600 baptized members, of whom 478 are adult communicants. Nine congregation members have gone on to enter full-time pastoral ministry.</div>
           </div>
+          <div class="timeline-item addition-feature">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-title">New School Addition Begins</div>
+            <div class="timeline-body">Construction began on a new school addition, including a gymnasium, to support St. Mark's growing student body and expand space for athletics, chapel, and community events.</div>
+            <div class="addition-showcase">
+              <div class="addition-photo addition-photo-featured">
+                <img src="images/New Addition Gym.jpg" alt="Rendering of the new school gymnasium" />
+                <div class="addition-photo-label">The New Gymnasium</div>
+              </div>
+              <div class="addition-photo">
+                <img src="images/New Addition Pastor.jpg" alt="Pastor at the school addition groundbreaking" />
+                <div class="addition-photo-label">Pastor at the Groundbreaking</div>
+              </div>
+              <div class="addition-photo">
+                <img src="images/New Addition Principal.jpg" alt="Principal and builders at the school addition groundbreaking" />
+                <div class="addition-photo-label">Principal &amp; Builders</div>
+              </div>
+              <div class="addition-photo">
+                <img src="images/New Addition Teachers.jpg" alt="Teachers celebrating the school addition" />
+                <div class="addition-photo-label">Teachers Celebrate</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1202,11 +1270,11 @@
           <p style="font-size:13px; color:rgba(255,255,255,0.55); font-style:italic; text-align:center;">The first Lutheran church in Clermont County — still proclaiming the same Gospel since 1958.</p>
         </div>
 
-        <div class="card">
+        <a class="card" href="https://www.lcms.org/" target="_blank" style="display:block; text-decoration:none; color:inherit;">
           <div class="card-icon">✝️</div>
           <div class="card-title">Part of the LCMS</div>
           <p class="card-body">St. Mark's is a proud member of The Lutheran Church–Missouri Synod, one of the largest Lutheran church bodies in the United States, sharing a commitment to biblical truth and the Lutheran confessions.</p>
-        </div>
+        </a>
 
         <div style="margin-top:20px; text-align:center;">
           <button class="btn-primary" onclick="showPage('new')" style="width:100%;">Visit Us This Sunday</button>
@@ -2229,19 +2297,19 @@
     </div>
     <div class="card-grid" style="margin-bottom:48px;">
       <div class="card" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 16px;">?</div>
+        <div class="card-icon" style="margin:0 auto 16px;">🙏</div>
         <div class="card-title">Donate to the Church</div>
         <p class="card-body" style="margin-bottom:20px;">Support Word and Sacraments ministry, pastoral care, outreach, and the day-to-day mission of St. Mark's Lutheran Church.</p>
         <a class="btn-primary" href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRvL1NC2iGCWhI5za5jJhQp_HO3iVYxvvxhHjRfLOeq662EvVVAEjqawDomKT1pboudm56g7ufp-_52zwUA8_VKo=" target="_blank">Give to Church</a>
       </div>
       <div class="card" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 16px;">??</div>
+        <div class="card-icon" style="margin:0 auto 16px;">🎓</div>
         <div class="card-title">Donate to the School</div>
         <p class="card-body" style="margin-bottom:20px;">Invest in Christ-centered education at St. Mark's Lutheran School &mdash; supporting teachers, programs, and financial aid for families.</p>
-        <a class="btn-primary" href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbUbaqLA_Vc-vBNUoZQKQ-lyXHubq5Z7ap5JVmPErc4ZeeyHCKCZhESjGNQmZ5B-6dx8MmThPHVOIxJlaPzyD5J40=&ver=3" target="_blank">Give to School</a>
+        <a class="btn-primary" href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRvL1NC2iGCWhI5za5jJhQp_HO3iVYxvvxhHjRfLOeq662EvVVAEjqawDomKT1pboudm56g7ufp-_52zwUA8_VKo=" target="_blank">Give to School</a>
       </div>
       <div class="card" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 16px;">??</div>
+        <div class="card-icon" style="margin:0 auto 16px;">💳</div>
         <div class="card-title">Make a School Payment</div>
         <p class="card-body" style="margin-bottom:20px;">Log in to the FACTS Family Portal to make tuition payments, set up a payment plan, or manage your school account.</p>
         <a class="btn-primary" href="https://factsmgt.com/login/" target="_blank">FACTS Portal</a>
