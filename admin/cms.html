@@ -13,10 +13,40 @@
     [class*="NestedObjectLabel"] {
       background-color: rgba(61, 20, 114, 0.10) !important;
     }
+
+    .dash-back-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99999;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #3D1472 0%, #5A2A9E 100%);
+      color: #fff;
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 12px 20px 12px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(61,20,114,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .dash-back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(61,20,114,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .dash-back-btn svg { flex-shrink: 0; }
   </style>
 </head>
 <body>
-  <a href="index.html" style="position:fixed; bottom:16px; left:16px; z-index:99999; background:#3D1472; color:#fff; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; padding:9px 16px; border-radius:6px; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,0.3);">← Dashboard</a>
+  <a href="index.html" class="dash-back-btn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Dashboard
+  </a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
