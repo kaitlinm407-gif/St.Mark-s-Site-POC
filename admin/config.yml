@@ -147,7 +147,7 @@ collections:
   # ── BANNERS ──────────────────────────────────────────────────────────────────
   - name: "banners"
     label: "📢 Banners & Announcements"
-    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish. (The school year shown on the banner is now controlled from 🗓️ Key Dates & School Year.)"
+    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish."
     files:
 
       - name: "reenrollment"
@@ -160,6 +160,11 @@ collections:
             widget: "boolean"
             default: false
             hint: "✅ ON = banner is visible to families. ❌ OFF = banner is hidden. Remember to click Publish after changing."
+
+          - label: "School Year"
+            name: "year"
+            widget: "string"
+            hint: "Shown at the top of the banner. Example: 2026–2027"
 
           - label: "Banner Headline"
             name: "headline"

@@ -922,17 +922,19 @@
     <img src="images/st marks church.png" alt="St. Mark's Lutheran Church sanctuary" style="width:100%; height:300px; object-fit:cover; object-position:center 40%; border-radius:10px; display:block; margin-bottom:56px; box-shadow:0 4px 20px rgba(0,0,0,0.1);" />
 
     <!-- Pastor's word -->
-    <div style="background:var(--warm-white); border:1px solid var(--border); border-radius:8px; padding:40px 36px; margin-bottom:56px;">
+    <div style="background:linear-gradient(135deg, #4A2E00 0%, var(--gold-dark) 55%, var(--gold) 100%); border-radius:8px; padding:40px 36px; margin-bottom:56px;">
       <div class="two-col" style="align-items:center; gap:40px;">
         <div style="text-align:center; flex-shrink:0;">
-          <img src="images/pastor-photo.jpg" alt="Pastor photo" style="width:130px; height:130px; border-radius:50%; object-fit:cover; display:block; margin:0 auto 12px; border:3px solid var(--gold); box-shadow:0 2px 10px rgba(0,0,0,0.1);" />
-          <div style="font-weight:700; font-size:14px; color:var(--navy);">[Pastor Name]</div>
-          <div style="font-size:12px; color:var(--text-light); margin-top:3px;">[Title]</div>
+          <div style="width:130px; height:130px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; border:3px solid #fff; background:rgba(255,255,255,0.15); box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+            <span style="font-size:40px;">✝️</span>
+          </div>
+          <div style="font-weight:700; font-size:14px; color:#fff;">Coming Soon</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); margin-top:3px;">New Pastor Bio</div>
         </div>
         <div>
-          <div class="section-label">A Word from Our Pastor</div>
-          <p style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); line-height:1.5; font-style:italic; margin-bottom:16px;">"[Pastor's welcome quote goes here.]"</p>
-          <p style="font-size:15px; color:var(--text-mid); line-height:1.75;">[A short personal paragraph from the pastor welcoming first-time visitors. 3–5 sentences.]</p>
+          <div class="section-label" style="color:#fff;">A Word from Our Pastor</div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:20px; color:#fff; line-height:1.5; margin-bottom:16px;">We're currently in the process of calling our next pastor.</p>
+          <p style="font-size:15px; color:rgba(255,255,255,0.85); line-height:1.75;">In the meantime, our vacancy pastor and dedicated leadership team continue to shepherd our congregation. Check back soon — we can't wait to introduce you!</p>
         </div>
       </div>
     </div>
@@ -2564,14 +2566,6 @@
       </div>
     </div>
     <img src="images/st marks school kids.webp" alt="St. Mark's students" style="max-width:420px; width:100%; height:auto; border-radius:10px; margin:0 auto 32px; display:block; box-shadow:0 4px 16px rgba(0,0,0,0.1);" />
-    <div style="background:var(--warm-white); border:1px solid var(--border); border-radius:8px; padding:24px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-      <div>
-        <div class="section-label">Reading Program</div>
-        <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; color:var(--navy); margin-bottom:4px;">Accelerated Reader</h3>
-        <p style="font-size:14px; color:var(--text-mid);">St. Mark's uses the Renaissance Accelerated Reader program to support and track independent reading growth for all students.</p>
-      </div>
-      <a class="btn-primary" href="https://global-zone52.renaissance-go.com/welcomeportal/1539211" target="_blank">Student Login</a>
-    </div>
   </div>
 </div>
 
@@ -2649,12 +2643,13 @@
     <p class="section-body" style="margin-bottom:28px;">Prefer to reach out directly? Every teacher and staff member can be contacted by email. For urgent matters, call the school office at <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong>.</p>
 
     <div style="border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:48px;">
-      <div style="background:var(--navy); padding:18px 24px; display:flex; align-items:center; gap:10px;">
+      <div style="background:var(--navy); padding:18px 24px; display:flex; align-items:center; gap:10px; cursor:pointer; user-select:none;" onclick="toggleStaffDirectory()">
         <span style="font-size:16px; color:var(--gold-light);">&#x269C;&#xFE0E;</span>
         <div style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#fff; letter-spacing:0.08em; text-transform:uppercase;">Faculty &amp; Staff Directory</div>
+        <span id="staff-dir-arrow" style="margin-left:auto; font-size:12px; color:#fff; transition:transform 0.25s;">&#9660;</span>
       </div>
 
-      <div id="staff-directory" style="padding:0 24px 16px;"><p style="color:var(--text-mid);padding:20px 0;">Loading&hellip;</p></div>
+      <div id="staff-directory" style="padding:0 24px 16px; display:none;"><p style="color:var(--text-mid);padding:20px 0;">Loading&hellip;</p></div>
     </div>
 
     <!-- Secondary resources — compact -->
@@ -3748,6 +3743,14 @@ function toggleGrade(idx) {
   body.classList.toggle('open');
 }
 
+function toggleStaffDirectory() {
+  var body = document.getElementById('staff-directory');
+  var arrow = document.getElementById('staff-dir-arrow');
+  var isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+
 // site-wide settings: current school year, enrollment year, and key dates
 // fetched once and shared by the banner, supply list, and every dyn-date span below.
 var siteSettingsPromise = fetch('/_data/site-settings.json?t=' + Date.now())
@@ -3787,24 +3790,23 @@ siteSettingsPromise.then(function(s) {
 });
 
 function loadBanner() {
-  Promise.all([
-    fetch('/_data/banner.json?t=' + Date.now()).then(function(r) { return r.json(); }),
-    siteSettingsPromise
-  ]).then(function(results) {
-    var b = results[0], s = results[1];
-    var el = document.getElementById('re-enrollment-banner');
-    if (!el || !b.active) return;
-    el.innerHTML =
-      '<div style="background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%);border-radius:10px;padding:28px 32px;margin-bottom:28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;">' +
-      '<div style="position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:130px;color:rgba(255,255,255,0.1);line-height:1;pointer-events:none;user-select:none;">&#x269C;&#xFE0E;</div>' +
-      '<div style="flex:1;min-width:200px;position:relative;z-index:1;">' +
-      '<div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">' + s.currentSchoolYear + ' School Year</div>' +
-      '<div style="font-family:\'Montserrat\',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">' + b.headline + '</div>' +
-      '<p style="font-size:14px;color:rgba(255,255,255,0.9);line-height:1.6;margin:0;">' + b.description + ' <strong style="color:#fff;">Deadline: ' + b.deadline + '</strong></p>' +
-      '</div>' +
-      '<a href="' + b.buttonLink + '" target="_blank" style="flex-shrink:0;background:#fff;color:var(--gold-dark);font-family:\'Montserrat\',sans-serif;font-weight:700;font-size:13px;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,0.15);position:relative;z-index:1;">' + b.buttonText + '</a>' +
-      '</div>';
-  }).catch(function() {});
+  fetch('/_data/banner.json?t=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(b) {
+      var el = document.getElementById('re-enrollment-banner');
+      if (!el || !b.active) return;
+      el.innerHTML =
+        '<div style="background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%);border-radius:10px;padding:28px 32px;margin-bottom:28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;">' +
+        '<div style="position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:130px;color:rgba(255,255,255,0.1);line-height:1;pointer-events:none;user-select:none;">&#x269C;&#xFE0E;</div>' +
+        '<div style="flex:1;min-width:200px;position:relative;z-index:1;">' +
+        '<div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">' + b.year + ' School Year</div>' +
+        '<div style="font-family:\'Montserrat\',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">' + b.headline + '</div>' +
+        '<p style="font-size:14px;color:rgba(255,255,255,0.9);line-height:1.6;margin:0;">' + b.description + ' <strong style="color:#fff;">Deadline: ' + b.deadline + '</strong></p>' +
+        '</div>' +
+        '<a href="' + b.buttonLink + '" target="_blank" style="flex-shrink:0;background:#fff;color:var(--gold-dark);font-family:\'Montserrat\',sans-serif;font-weight:700;font-size:13px;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,0.15);position:relative;z-index:1;">' + b.buttonText + '</a>' +
+        '</div>';
+    })
+    .catch(function() {});
 }
 loadBanner();
 
