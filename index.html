@@ -104,6 +104,8 @@
 
   /* CARDS */
   .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) { .card-grid-4 { grid-template-columns: 1fr; } }
   .card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 8px; padding: 28px 24px; }
 
   /* OFFER SPLIT (homepage "What We Offer" — dark editorial band) */
@@ -1072,6 +1074,7 @@
       <h2 class="section-title">Scripture, Grace, and Faith</h2>
       <div class="divider" style="margin:16px auto 24px;"></div>
       <p class="section-body">St. Mark's Lutheran Church is affiliated with <strong>The Lutheran Church–Missouri Synod (LCMS)</strong>, one of the largest Lutheran denominations in the United States. Our teachings are based on the Bible as God's inspired and inerrant Word — the sole authority for what we believe, teach, and practice.</p>
+      <p class="section-body">As a congregation of the LCMS, we subscribe without reservation to the <strong>Lutheran Confessions</strong> contained in the Book of Concord (1580) — including the Small and Large Catechisms and the Augsburg Confession — as a true and correct exposition of Holy Scripture. We hold these confessions not as equal to God's Word, but because they faithfully teach what Scripture teaches, guiding us into sound doctrine and guarding against error.</p>
     </div>
 
     <!-- Three Solas -->
@@ -1567,7 +1570,7 @@
         <div class="divider"></div>
         <p class="section-body">St. Mark's welcomes college students and young adults who are looking to stay connected to their faith, build relationships, and find community outside of campus life.</p>
         <p class="section-body" style="margin-top:-16px;">Whether you grew up at St. Mark's or are new to the area, there is a place for you here. We believe the years of young adulthood are among the most formative for growing in faith.</p>
-        <p style="font-size:14px; color:var(--text-mid);">Contact us at <strong>(513) 575-0292</strong> or <strong>stmarksmilford@hotmail.com</strong> to learn about current gatherings and opportunities.</p>
+        <p style="font-size:14px; color:var(--text-mid);">Contact us at <strong><a href="tel:5135750292" style="color:inherit;">(513) 575-0292</a></strong> or <strong><a href="mailto:stmarksmilford@hotmail.com" style="color:inherit;">stmarksmilford@hotmail.com</a></strong> to learn about current gatherings and opportunities.</p>
       </div>
       <div class="highlight-box">
         <div class="section-label">You Belong Here</div>
@@ -1580,7 +1583,7 @@
       </div>
     </div>
 
-    <div class="card-grid">
+    <div class="card-grid card-grid-4">
       <div class="card">
         <div class="card-icon">📖</div>
         <div class="card-title">Bible Study</div>
@@ -1590,6 +1593,11 @@
         <div class="card-icon">🤝</div>
         <div class="card-title">Fellowship Events</div>
         <p class="card-body">From seasonal gatherings to service projects, St. Mark's offers opportunities to connect with others and build meaningful friendships grounded in faith.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚾</div>
+        <div class="card-title">Group Activities</div>
+        <p class="card-body">Our young adults get together outside of church too — think Reds baseball games, kayaking trips, and other outings throughout the year. It's a fun, low-pressure way to build real friendships.</p>
       </div>
       <div class="card">
         <div class="card-icon">⛪</div>
@@ -1842,7 +1850,7 @@
       <div>
         <div class="section-label">Questions?</div>
         <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:6px;">Get in Touch with the School Office</h3>
-        <p style="font-size:14px; color:var(--text-mid);">Call us at <strong>(513) 575-3354</strong> or email <strong>stmarksmilford@hotmail.com</strong></p>
+        <p style="font-size:14px; color:var(--text-mid);">Call us at <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong> or email <strong><a href="mailto:stmarksmilford@hotmail.com" style="color:inherit;">stmarksmilford@hotmail.com</a></strong></p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
@@ -2014,9 +2022,9 @@
     <h2 class="section-title" style="text-align:center; margin-bottom:8px;">Get Involved at St. Mark's</h2>
     <div class="divider" style="margin:16px auto 32px;"></div>
     <div class="card-grid" style="margin-bottom:48px;">
-      <div class="card"><div class="card-icon">??</div><div class="card-title">Serve in the School</div><p class="card-body">Volunteer in classrooms, assist with events, or support extracurricular activities at St. Mark's Lutheran School.</p></div>
-      <div class="card"><div class="card-icon">??</div><div class="card-title">Community Service</div><p class="card-body">Join congregation members in local service projects and outreach efforts throughout the Milford and Greater Cincinnati area.</p></div>
-      <div class="card"><div class="card-icon">??</div><div class="card-title">Worship Ministry</div><p class="card-body">Serve through music, ushering, reading, or other roles in our Sunday worship services. All are welcome to inquire.</p></div>
+      <div class="card"><div class="card-icon">🏫</div><div class="card-title">Serve in the School</div><p class="card-body">Volunteer in classrooms, assist with events, or support extracurricular activities at St. Mark's Lutheran School.</p></div>
+      <div class="card"><div class="card-icon">🤝</div><div class="card-title">Community Service</div><p class="card-body">Join congregation members in local service projects and outreach efforts throughout the Milford and Greater Cincinnati area.</p></div>
+      <div class="card"><div class="card-icon">🎶</div><div class="card-title">Worship Ministry</div><p class="card-body">Serve through music, ushering, reading, or other roles in our Sunday worship services. All are welcome to inquire.</p></div>
     </div>
     <div class="highlight-box" style="text-align:center;">
       <div class="section-label">Our Calling</div>
@@ -2381,7 +2389,7 @@
       <div>
         <div class="section-label">Questions?</div>
         <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:6px;">Contact the School Office</h3>
-        <p style="font-size:14px; color:var(--text-mid);">Call <strong>(513) 575-3354</strong> or email <strong>stmarksmilford@hotmail.com</strong></p>
+        <p style="font-size:14px; color:var(--text-mid);">Call <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong> or email <strong><a href="mailto:stmarksmilford@hotmail.com" style="color:inherit;">stmarksmilford@hotmail.com</a></strong></p>
       </div>
       <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
     </div>
@@ -2447,8 +2455,8 @@
 
     <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
       <button class="btn-primary" onclick="showPage('contact')">Schedule a Visit</button>
-      <button class="btn-primary" onclick="showPage('tuition')" style="background:var(--gold);">Full Tuition Info</button>
-      <span class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" onclick="showPage('admissions')">Enroll Now</span>
+      <button class="btn-primary" onclick="showPage('tuition')">Full Tuition Info</button>
+      <button class="btn-primary" onclick="showPage('admissions')">Enroll Now</button>
     </div>
   </div>
 </div>
@@ -2638,7 +2646,7 @@
     <div class="section-label">Reach Your Child's Teacher</div>
     <h2 class="section-title">Teacher &amp; Staff Directory</h2>
     <div class="divider"></div>
-    <p class="section-body" style="margin-bottom:28px;">Prefer to reach out directly? Every teacher and staff member can be contacted by email. For urgent matters, call the school office at <strong>(513) 575-3354</strong>.</p>
+    <p class="section-body" style="margin-bottom:28px;">Prefer to reach out directly? Every teacher and staff member can be contacted by email. For urgent matters, call the school office at <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong>.</p>
 
     <div style="border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:48px;">
       <div style="background:var(--navy); padding:18px 24px; display:flex; align-items:center; gap:10px;">
@@ -2679,7 +2687,7 @@
       <div>
         <div class="section-label">Questions?</div>
         <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; color:var(--navy); margin-bottom:4px;">Contact the School Office</h3>
-        <p style="font-size:14px; color:var(--text-mid);">Call <strong>(513) 575-3354</strong> or email <strong>stmarksmilford@hotmail.com</strong></p>
+        <p style="font-size:14px; color:var(--text-mid);">Call <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong> or email <strong><a href="mailto:stmarksmilford@hotmail.com" style="color:inherit;">stmarksmilford@hotmail.com</a></strong></p>
       </div>
       <button class="btn-primary" onclick="showPage('contact')">Contact Us</button>
     </div>
@@ -2702,7 +2710,7 @@
       <div class="ann-icon">📋</div>
       <div>
         <div class="ann-title" id="supply-list-ann-title">Supply lists — updated each summer</div>
-        <div class="ann-body">Teachers may send home a personalized addendum at the start of the year. Questions? Call the school office at <strong>(513) 575-3354</strong>.</div>
+        <div class="ann-body">Teachers may send home a personalized addendum at the start of the year. Questions? Call the school office at <strong><a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a></strong>.</div>
       </div>
     </div>
     <div id="supply-list-content"></div>
@@ -3010,7 +3018,7 @@
       <div class="section-label">Getting Started</div>
       <h2 class="section-title">Your Path to St. Mark's</h2>
       <div class="divider" style="margin:16px auto 24px;"></div>
-      <p class="section-body">From first inquiry to first day of school, our admissions team is here to guide your family every step of the way. Contact our Admissions Coordinator, <strong>Rachel Bailey</strong>, at <a href="mailto:admissions@stmarksmilford.org" style="color:var(--navy); font-weight:600;">admissions@stmarksmilford.org</a> or (513) 575-3354.</p>
+      <p class="section-body">From first inquiry to first day of school, our admissions team is here to guide your family every step of the way. Contact our Admissions Coordinator, <strong>Rachel Bailey</strong>, at <a href="mailto:admissions@stmarksmilford.org" style="color:var(--navy); font-weight:600;">admissions@stmarksmilford.org</a> or <a href="tel:5135753354" style="color:var(--navy); font-weight:600;">(513) 575-3354</a>.</p>
     </div>
     <div class="card-grid">
       <div class="card" style="cursor:pointer;" onclick="showPage('enroll')">
@@ -3127,7 +3135,7 @@
       <h3 class="section-title" style="color:#fff; font-size:22px;">Contact Our Admissions Office</h3>
       <div class="divider"></div>
       <p class="section-body" style="font-size:15px;"><strong style="color:#fff;">Rachel Bailey</strong> — Admissions Coordinator<br>
-      <a href="mailto:admissions@stmarksmilford.org" style="color:var(--gold-light);">admissions@stmarksmilford.org</a> &nbsp;|&nbsp; (513) 575-3354</p>
+      <a href="mailto:admissions@stmarksmilford.org" style="color:var(--gold-light);">admissions@stmarksmilford.org</a> &nbsp;|&nbsp; <a href="tel:5135753354" style="color:var(--gold-light);">(513) 575-3354</a></p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
         <button class="btn-primary" onclick="showPage('contact')" style="background:var(--gold);">Contact Us</button>
         <button class="btn-outline" onclick="showPage('tuition')">View Tuition &amp; Fees</button>
@@ -3638,7 +3646,7 @@ function renderSupplyList() {
       container.innerHTML = html;
     })
     .catch(function() {
-      container.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Supply lists unavailable. Please contact the school office at (513) 575-3354.</p>';
+      container.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Supply lists unavailable. Please contact the school office at <a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a>.</p>';
     });
 }
 
@@ -3697,7 +3705,7 @@ function renderStaffPage() {
       el.innerHTML = html;
     })
     .catch(function() {
-      el.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Staff directory unavailable. Please call (513) 575-3354.</p>';
+      el.innerHTML = '<p style="color:var(--text-mid);padding:20px 0;">Staff directory unavailable. Please call <a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a>.</p>';
     });
 }
 
@@ -3729,7 +3737,7 @@ function renderStaffDirectory() {
       el.innerHTML = html;
     })
     .catch(function() {
-      el.innerHTML = '<p style="color:var(--text-mid);padding:12px 0;">Directory unavailable. Call (513) 575-3354.</p>';
+      el.innerHTML = '<p style="color:var(--text-mid);padding:12px 0;">Directory unavailable. Call <a href="tel:5135753354" style="color:inherit;">(513) 575-3354</a>.</p>';
     });
 }
 
