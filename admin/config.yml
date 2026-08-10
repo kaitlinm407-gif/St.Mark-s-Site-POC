@@ -10,6 +10,92 @@ public_folder: "/images"
 # What teachers see in the left sidebar — keep these names simple and action-oriented
 collections:
 
+  # ── EVENTS & CALLOUTS ─────────────────────────────────────────────────────────
+  - name: "events"
+    label: "🎉 Events & Callouts"
+    description: "Add, remove, or reorder the featured event cards on the Events page (things like Vacation Bible School, fall festivals, fundraisers, etc). The School Open House and Re-Enrollment cards are handled separately under 🗓️ Key Dates & School Year."
+    files:
+
+      - name: "events_list"
+        label: "Featured Events"
+        file: "_data/events.json"
+        fields:
+
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            label_singular: "Event"
+            summary: "{{fields.title}}"
+            hint: "Click '+ Add Event' to add a new event card. Drag the handle (⠿) to reorder. Click the trash icon to delete one."
+            fields:
+
+              - label: "Event Title"
+                name: "title"
+                widget: "string"
+                hint: "e.g. Vacation Bible School  or  Fall Festival"
+
+              - label: "Category Tag"
+                name: "tag"
+                widget: "string"
+                hint: "Short label shown above the title. Example: Children & Youth  or  Community Event"
+
+              - label: "Start Date"
+                name: "startDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                hint: "The date shown on the card's badge."
+
+              - label: "End Date (optional)"
+                name: "endDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                required: false
+                hint: "Only fill this in for multi-day events (like VBS). Leave blank for a single-day event."
+
+              - label: "Time (optional)"
+                name: "timeLabel"
+                widget: "string"
+                required: false
+                hint: "Example: 9:00am–12:00pm  or  Time TBD. Leave blank to show just the date."
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                hint: "1–3 sentences describing the event."
+
+              - label: "Button Text (optional)"
+                name: "buttonText"
+                widget: "string"
+                required: false
+                hint: "Example: Register Now  or  Learn More. Leave both this and the link blank to hide the button."
+
+              - label: "Button Link (optional)"
+                name: "buttonLink"
+                widget: "string"
+                required: false
+                hint: "Where the button takes people. A full web address, e.g. https://..."
+
+              - label: "Photo (optional)"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Upload a background photo for the card. Leave blank to use a solid color background instead."
+
+              - label: "Card Color"
+                name: "colorTheme"
+                widget: "select"
+                default: "navy"
+                options:
+                  - { label: "Purple", value: "navy" }
+                  - { label: "Gold", value: "gold" }
+                hint: "Used as the card's solid background if no photo is uploaded, and as the color tint over the photo if one is uploaded."
+
   # ── KEY DATES & SCHOOL YEAR ───────────────────────────────────────────────────
   - name: "site-settings"
     label: "🗓️ Key Dates & School Year"

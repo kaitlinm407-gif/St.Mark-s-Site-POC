@@ -2045,26 +2045,7 @@
     <h2 class="section-title">Featured Events</h2>
     <div class="divider"></div>
     <div class="event-scroll-wrapper">
-    <div class="event-scroll-track">
-
-      <div class="event-card">
-        <div class="event-card-header gold" style="background-image:url('images/VBS.png'); background-size:cover; background-position:center; position:relative;">
-          <div style="position:absolute; inset:0; background:rgba(130,80,0,0.65);"></div>
-          <div style="position:relative; z-index:1;">
-            <div class="event-date-badge">
-              <span class="event-date-month">Jun</span>
-              <span class="event-date-day">22</span>
-            </div>
-            <div class="event-card-tag">Children &amp; Youth</div>
-            <div class="event-card-title">Vacation Bible School</div>
-            <div class="event-card-time">June 22–26 &middot; 9:00am–12:00pm</div>
-          </div>
-        </div>
-        <div class="event-card-body">
-          <p class="event-card-desc">Join us for a week of faith, fun, and friendship! VBS is open to all children and is one of the highlights of our summer. Crafts, songs, games, and God's Word — all wrapped into one amazing week.</p>
-          <a class="btn-primary" href="https://VBSPRO.EVENTS/P/STMARKSRF" target="_blank">Register Now</a>
-        </div>
-      </div>
+    <div class="event-scroll-track" id="event-scroll-track">
 
       <div class="event-card">
         <div class="event-card-header" style="background-image:url('images/st marks school building.jpg'); background-size:cover; background-position:center; position:relative;">
@@ -3818,6 +3799,52 @@ function loadBanner() {
   }).catch(function() {});
 }
 loadBanner();
+
+function fmtDateRange(startIso, endIso) {
+  if (!startIso) return '';
+  var start = fmtDate(startIso, 'mid');
+  if (!endIso || endIso === startIso) return start;
+  var sD = new Date(startIso + 'T00:00:00');
+  var eD = new Date(endIso + 'T00:00:00');
+  if (sD.getMonth() === eD.getMonth()) return start + '–' + eD.getDate();
+  return start + ' – ' + fmtDate(endIso, 'mid');
+}
+
+function renderCustomEvents() {
+  var track = document.getElementById('event-scroll-track');
+  if (!track) return;
+  fetch('/_data/events.json?t=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var events = data.events || [];
+      var html = events.map(function(ev) {
+        var isGold = ev.colorTheme === 'gold';
+        var headerClass = 'event-card-header' + (isGold ? ' gold' : '');
+        var bgStyle = ev.image ? "background-image:url('" + ev.image + "'); background-size:cover; background-position:center; position:relative;" : 'position:relative;';
+        var overlay = ev.image ? '<div style="position:absolute;inset:0;background:' + (isGold ? 'rgba(130,80,0,0.65)' : 'rgba(28,5,75,0.72)') + ';"></div>' : '';
+        var dateLabel = fmtDateRange(ev.startDate, ev.endDate);
+        var timeStr = dateLabel + (ev.timeLabel ? ' &middot; ' + ev.timeLabel : '');
+        var btn = (ev.buttonText && ev.buttonLink) ? '<a class="btn-primary" href="' + ev.buttonLink + '" target="_blank">' + ev.buttonText + '</a>' : '';
+        return '<div class="event-card">' +
+          '<div class="' + headerClass + '" style="' + bgStyle + '">' + overlay +
+            '<div style="position:relative;z-index:1;">' +
+              '<div class="event-date-badge"><span class="event-date-month">' + fmtDate(ev.startDate, 'badge-month') + '</span><span class="event-date-day">' + fmtDate(ev.startDate, 'badge-day') + '</span></div>' +
+              '<div class="event-card-tag">' + (ev.tag || '') + '</div>' +
+              '<div class="event-card-title">' + (ev.title || '') + '</div>' +
+              '<div class="event-card-time">' + timeStr + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="event-card-body">' +
+            '<p class="event-card-desc">' + (ev.description || '') + '</p>' +
+            btn +
+          '</div>' +
+        '</div>';
+      }).join('');
+      track.insertAdjacentHTML('afterbegin', html);
+    })
+    .catch(function() {});
+}
+renderCustomEvents();
 
 function toggleMenu(which) {
   var btn = document.getElementById('hamburger-' + which);

@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "title": "Vacation Bible School",
+      "tag": "Children & Youth",
+      "startDate": "2026-06-22",
+      "endDate": "2026-06-26",
+      "timeLabel": "9:00am–12:00pm",
+      "description": "Join us for a week of faith, fun, and friendship! VBS is open to all children and is one of the highlights of our summer. Crafts, songs, games, and God's Word — all wrapped into one amazing week.",
+      "buttonText": "Register Now",
+      "buttonLink": "https://VBSPRO.EVENTS/P/STMARKSRF",
+      "image": "images/VBS.png",
+      "colorTheme": "gold"
+    }
+  ]
+}
