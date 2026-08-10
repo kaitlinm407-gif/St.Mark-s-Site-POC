@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>St. Mark's — Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Recolor the editor's gray list-item boxes to match the site's purple.
+       Decap CMS generates a random hash prefix on its CSS classes that changes
+       between versions, but the descriptive suffix (e.g. "NestedObjectLabel")
+       stays stable, so we match on that instead of the full class name. */
+    [class*="NestedObjectLabel"] {
+      background-color: rgba(61, 20, 114, 0.10) !important;
+    }
+  </style>
 </head>
 <body>
-  <a href="index.html" style="position:fixed; top:14px; left:14px; z-index:99999; background:#3D1472; color:#fff; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; padding:9px 16px; border-radius:6px; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,0.3);">← Dashboard</a>
+  <a href="index.html" style="position:fixed; bottom:16px; left:16px; z-index:99999; background:#3D1472; color:#fff; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; padding:9px 16px; border-radius:6px; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,0.3);">← Dashboard</a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
