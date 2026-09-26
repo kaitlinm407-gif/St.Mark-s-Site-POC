@@ -2,16 +2,16 @@
   "staff": [
     {
       "name": "Tim Kollmorgen",
-      "role": "Principal · 7–8th Grade Math",
+      "role": "Principal",
       "section": "Administration",
       "photo": "images/staff/0011_Kollmorgen_Kim_01.jpg",
       "email": "tim.kollmorgen@stmarks.com",
-      "bio": "Mr. Kollmorgen leads St. Mark's Lutheran School with a commitment to academic excellence and Christ-centered education. He also serves as the 7th and 8th grade math teacher.",
+      "bio": "Mr. Kollmorgen leads St. Mark's Lutheran School with a commitment to academic excellence and Christ-centered education.",
       "showInDirectory": true
     },
     {
       "name": "Rachel Bailey",
-      "role": "Admissions Director",
+      "role": "Admissions Specialist",
       "section": "Administration",
       "photo": "images/staff/0001_Bailey_Rachel_01.jpg",
       "email": "rachel.bailey@stmarks.com",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Diane Cartheuser",
-      "role": "School Office",
+      "role": "Administrative Assistant",
       "section": "Administration",
       "photo": "images/staff/0005_Cartheuser_Diane_01.jpg",
       "email": "diane.cartheuser@stmarks.com",
@@ -37,17 +37,8 @@
       "showInDirectory": true
     },
     {
-      "name": "Lindsey Newell",
-      "role": "3 Year Old Teacher",
-      "section": "Preschool",
-      "photo": "images/staff/0016_Newell_Lindsey_01.jpg",
-      "email": "lindsey.newell@stmarks.com",
-      "bio": "",
-      "showInDirectory": true
-    },
-    {
       "name": "Janet Rehmer",
-      "role": "4 Year Old Teacher",
+      "role": "Preschool Director · 4 Year Old Teacher",
       "section": "Preschool",
       "photo": "images/staff/0017_Rehmer_Janet_01.jpg",
       "email": "janet.rehmer@stmarks.com",
@@ -64,10 +55,19 @@
       "showInDirectory": true
     },
     {
-      "name": "Carrie Vedder",
+      "name": "Lindsey Newell",
+      "role": "3 Year Old Teacher",
+      "section": "Preschool",
+      "photo": "images/staff/0016_Newell_Lindsey_01.jpg",
+      "email": "lindsey.newell@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
+    },
+    {
+      "name": "Rose Jones",
       "role": "3 Year Old Aide",
       "section": "Preschool",
-      "photo": "images/staff/0022_Vedder_Carrie_01.jpg",
+      "photo": "",
       "email": "",
       "bio": "",
       "showInDirectory": false
@@ -146,7 +146,7 @@
     },
     {
       "name": "Rebecca Kollmorgen",
-      "role": "4th Grade Homeroom · K–8 Music",
+      "role": "4th Grade Homeroom · K–8 Music · Band",
       "section": "Kindergarten & Grades 1–4",
       "photo": "images/staff/0012_Kollmorgen_Rebecca_01.jpg",
       "email": "rebecca.kollmorgen@stmarks.com",
@@ -154,17 +154,17 @@
       "showInDirectory": true
     },
     {
-      "name": "Madalyn Graves",
-      "role": "5th Grade Homeroom · Social Studies",
+      "name": "Andrew Kollmorgen",
+      "role": "5th–8th Grade Social Studies · Athletic Director",
       "section": "Grades 5–8",
-      "photo": "images/staff/0009_Graves_Madalyn_01.jpg",
-      "email": "madalyn.graves@stmarks.com",
+      "photo": "",
+      "email": "andrew.kollmorgen@stmarks.com",
       "bio": "",
       "showInDirectory": true
     },
     {
       "name": "Lisa Rhonemus",
-      "role": "6th Grade Homeroom · Science",
+      "role": "6th Grade Homeroom · 5th–8th Grade Science",
       "section": "Grades 5–8",
       "photo": "images/staff/0018_Rhonemus_Lisa_01.jpg",
       "email": "lisa.rhonemus@stmarks.com",
@@ -173,7 +173,7 @@
     },
     {
       "name": "Andrea Kiehl",
-      "role": "7th–8th Grade Homeroom · Language Arts",
+      "role": "7th–8th Grade Homeroom · 5th–8th Grade ELA",
       "section": "Grades 5–8",
       "photo": "images/staff/0010_Kiehl_Andrea_01.jpg",
       "email": "andrea.kiehl@stmarks.com",
@@ -181,17 +181,17 @@
       "showInDirectory": true
     },
     {
-      "name": "Ruth Brothers",
+      "name": "Megan Johnson",
       "role": "Speech Intervention",
       "section": "Specialists & Support",
-      "photo": "images/staff/0004_Brothers_Ruth_01.jpg",
-      "email": "ruth.brothers@stmarks.com",
+      "photo": "",
+      "email": "megan.johnson@stmarks.com",
       "bio": "",
       "showInDirectory": true
     },
     {
       "name": "Sara Uhl",
-      "role": "Reading Specialist",
+      "role": "Reading Intervention",
       "section": "Specialists & Support",
       "photo": "images/staff/0023_Uhl_Sara_01.jpg",
       "email": "sara.uhl@stmarks.com",
@@ -199,40 +199,22 @@
       "showInDirectory": true
     },
     {
-      "name": "Kara Williamson",
-      "role": "Math Specialist",
-      "section": "Specialists & Support",
-      "photo": "images/staff/0026_Williamson_Kara_01.jpg",
-      "email": "kara.williamson@stmarks.com",
-      "bio": "",
-      "showInDirectory": true
-    },
-    {
-      "name": "Scott Stygar",
-      "role": "K–3 Science · 4–8 Technology",
-      "section": "Specialists & Support",
-      "photo": "images/staff/0021_Stygar_Scott_01.jpg",
-      "email": "scott.stygar@stmarks.com",
-      "bio": "",
-      "showInDirectory": true
-    },
-    {
-      "name": "Gabriela Vintimilla",
+      "name": "Gabriella Vintimilla",
       "role": "Spanish Teacher",
       "section": "Specialists & Support",
       "photo": "images/staff/0023_Vintimilla_Gabriela_01.jpg",
-      "email": "gabriela.vintimilla@stmarks.com",
+      "email": "gabriella.vintimilla@stmarks.com",
       "bio": "",
       "showInDirectory": true
     },
     {
-      "name": "Mr. Penry",
-      "role": "Faculty",
+      "name": "Herb Penry",
+      "role": "IT Specialist",
       "section": "Specialists & Support",
       "photo": "images/staff/0007_Penry_Mr._01.jpg",
-      "email": "",
+      "email": "herb.penry@stmarks.com",
       "bio": "",
-      "showInDirectory": false
+      "showInDirectory": true
     },
     {
       "name": "Kathy Coletta",
@@ -244,13 +226,31 @@
       "showInDirectory": false
     },
     {
-      "name": "Paula Schepmann",
-      "role": "Staff",
+      "name": "Brittney Campbell",
+      "role": "Extended Care",
       "section": "Specialists & Support",
-      "photo": "images/staff/0019_Schepmann_Paula_01.jpg",
+      "photo": "",
       "email": "",
       "bio": "",
       "showInDirectory": false
+    },
+    {
+      "name": "Bryan Jones",
+      "role": "Custodian",
+      "section": "Specialists & Support",
+      "photo": "",
+      "email": "",
+      "bio": "",
+      "showInDirectory": false
+    },
+    {
+      "name": "Paula Schepmann",
+      "role": "Bookkeeper",
+      "section": "Specialists & Support",
+      "photo": "images/staff/0019_Schepmann_Paula_01.jpg",
+      "email": "paula.schepmann@stmarks.com",
+      "bio": "",
+      "showInDirectory": true
     }
   ]
 }
