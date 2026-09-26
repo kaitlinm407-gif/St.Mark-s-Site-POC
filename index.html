@@ -2171,7 +2171,7 @@
           <p class="section-body" style="font-size:13px;">The most up-to-date info is on our Facebook page and in the St. Mark's Messenger newsletter.</p>
           <div style="display:flex; flex-direction:column; gap:10px; margin-top:4px;">
             <a class="btn-primary" href="https://www.facebook.com/stmarksmilford/" target="_blank" style="text-align:center; display:inline-flex; align-items:center; justify-content:center; gap:8px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Follow on Facebook</a>
-            <button class="btn-outline" onclick="showPage('messenger')" style="text-align:center; color:var(--navy); border-color:rgba(61,20,114,0.3);">Read the Newsletter</button>
+            <button class="btn-outline" onclick="showPage('messenger')" style="text-align:center; color:var(--navy); border-color:rgba(61,20,114,0.3);">Get the Newsletter</button>
           </div>
         </div>
       </div>
@@ -2196,8 +2196,8 @@
         <div class="section-label">Newsletter</div>
         <h2 class="section-title">The St. Mark's Messenger</h2>
         <div class="divider"></div>
-        <p class="section-body">The <strong>St. Mark's Messenger</strong> is our weekly newsletter connecting school families with everything happening at St. Mark's — from classroom news and upcoming events to important announcements from our staff. Each issue is posted here so you never miss a thing.</p>
-        <button class="btn-primary" onclick="showPage('messenger')">Read the Messenger</button>
+        <p class="section-body">The <strong>St. Mark's Messenger</strong> is our weekly email newsletter connecting families with everything happening at St. Mark's — from classroom news and upcoming events to important announcements from our staff, delivered straight to your inbox.</p>
+        <button class="btn-primary" onclick="showPage('messenger')">Get the Messenger</button>
       </div>
       <div>
         <div class="section-label">Weekly Bulletins</div>
@@ -2231,56 +2231,40 @@
     <div class="solid-fleur">&#x269C;&#xFE0E;</div>
     <div class="hero-content">
       <h1 class="hero-title">The St. Mark's Messenger</h1>
-      <p class="hero-sub">Our school newsletter — keeping families connected to the life and ministry of St. Mark's.</p>
+      <p class="hero-sub">Our weekly email newsletter — keeping families connected to the life and ministry of St. Mark's.</p>
     </div>
   </div>
 
   <div class="section">
 
-    <p style="font-size:16px; color:var(--text-mid); line-height:1.75; margin-bottom:36px; max-width:720px;">The <strong style="color:var(--navy);">St. Mark's Messenger</strong> is our weekly newsletter connecting school families with everything happening at St. Mark's — from classroom news and upcoming events to important announcements from our staff. Each issue is posted here so you never miss a thing.</p>
+    <p style="font-size:16px; color:var(--text-mid); line-height:1.75; margin-bottom:36px; max-width:720px;">The <strong style="color:var(--navy);">St. Mark's Messenger</strong> is our weekly email newsletter — classroom news, upcoming events, and important announcements from our staff, delivered straight to your inbox. It isn't posted online; if you're a current church or school family, you should already be receiving it by email each week.</p>
 
-    <div style="display:grid; grid-template-columns:280px 1fr; gap:28px; align-items:start;">
-
-      <!-- Sidebar: search + issue list -->
-      <div style="position:sticky; top:140px;">
-        <div class="section-label">All Issues</div>
-        <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:12px;">Archive</h3>
-        <div class="divider" style="margin-bottom:16px;"></div>
-
-        <!-- Search box -->
-        <input
-          type="text"
-          id="messenger-search"
-          placeholder="Search issues..."
-          oninput="searchMessenger(this.value)"
-          style="width:100%; padding:9px 12px; border:1.5px solid var(--border); border-radius:6px; font-size:13px; color:var(--text-dark); outline:none; margin-bottom:12px; font-family:'Montserrat',sans-serif;"
-        />
-
-        <!-- Issue list -->
-        <div id="messenger-list" style="display:flex; flex-direction:column; gap:4px; max-height:480px; overflow-y:auto;"></div>
-
-        <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border);">
-          <a href="https://www.facebook.com/stmarksmilford/" target="_blank" style="font-size:13px; color:var(--gold-dark); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Follow on Facebook for new issues</a>
-        </div>
+    <div class="two-col" style="margin-bottom:48px; align-items:start;">
+      <div class="card">
+        <div class="card-icon">✉️</div>
+        <div class="card-title">Not Receiving It?</div>
+        <p class="card-body">If you're part of our church or school family and aren't getting the weekly email, contact the office to be added to the list.</p>
       </div>
-
-      <!-- Issue viewer -->
-      <div>
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
-          <div>
-            <div class="section-label">Now Reading</div>
-            <h3 id="messenger-current-title" style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin:0;"></h3>
-          </div>
-          <a id="messenger-open-link" href="#" target="_blank" class="btn-primary" style="font-size:12px; padding:8px 16px;">Open in New Tab ↗</a>
-        </div>
-        <iframe
-          id="messenger-frame"
-          src=""
-          style="width:100%; height:680px; border:1px solid var(--border); border-radius:10px; background:var(--warm-white);"
-          frameborder="0">
-        </iframe>
+      <div class="card">
+        <div class="card-icon">👋</div>
+        <div class="card-title">New to St. Mark's?</div>
+        <p class="card-body">Reach out and we'll get you connected — whether you're a prospective family or just want to stay in the loop.</p>
       </div>
+    </div>
 
+    <div class="highlight-box" style="text-align:center;">
+      <div class="section-label">Get on the List</div>
+      <h3 class="section-title" style="color:#fff; font-size:22px;">Contact the Office</h3>
+      <div class="divider" style="margin:16px auto 24px;"></div>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn-primary" href="tel:5135750292">Church Office: (513) 575-0292</a>
+        <a class="btn-outline" href="tel:5135753354">School Office: (513) 575-3354</a>
+      </div>
+      <p style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:20px;">Or email <a href="mailto:stmarksmilford@hotmail.com" style="color:var(--gold-light); font-weight:600;">stmarksmilford@hotmail.com</a></p>
+    </div>
+
+    <div style="margin-top:32px; text-align:center;">
+      <a href="https://www.facebook.com/stmarksmilford/" target="_blank" style="font-size:13px; color:var(--gold-dark); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>You can also follow us on Facebook for the latest updates</a>
     </div>
 
   </div>
@@ -2687,10 +2671,10 @@
         </div>
       </div>
       <div onclick="showPage('messenger')" style="display:flex; align-items:center; gap:14px; padding:18px 20px; border:1px solid var(--border); border-radius:8px; cursor:pointer; background:#fff;">
-        <span style="font-size:26px; flex-shrink:0;">📰</span>
+        <span style="font-size:26px; flex-shrink:0;">✉️</span>
         <div>
           <div style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:600; color:var(--navy);">St. Mark's Messenger</div>
-          <div style="font-size:12px; color:var(--gold); font-weight:600;">Read →</div>
+          <div style="font-size:12px; color:var(--gold); font-weight:600;">Get It →</div>
         </div>
       </div>
     </div>
@@ -3201,62 +3185,6 @@
 </footer>
 
 <script>
-// ============================================================
-// MESSENGER ISSUES — easy to edit!
-// Add new issues at the TOP of this array (newest first).
-// Format: { date: 'Month DD, YYYY', url: 'https://...' }
-// ============================================================
-var messengerIssues = [
-  { date: 'March 6, 2020',    url: 'https://stmarksmilford.org/?p=661' },
-  { date: 'February 28, 2020', url: 'https://stmarksmilford.org/?p=605' },
-  { date: 'February 21, 2020', url: 'https://stmarksmilford.org/?p=625' },
-  { date: 'February 14, 2020', url: 'https://stmarksmilford.org/?p=621' }
-];
-
-function buildMessengerList(issues) {
-  var list = document.getElementById('messenger-list');
-  if (!list) return;
-  list.innerHTML = '';
-  issues.forEach(function(issue, i) {
-    var btn = document.createElement('button');
-    btn.textContent = issue.date;
-    btn.dataset.url = issue.url;
-    btn.style.cssText = 'width:100%; text-align:left; padding:10px 12px; border-radius:6px; border:1px solid var(--border); background:#fff; cursor:pointer; font-size:13px; font-weight:600; color:var(--navy); transition:all 0.15s; font-family:Montserrat,sans-serif;';
-    if (i === 0) { btn.style.background = 'var(--navy)'; btn.style.color = '#fff'; btn.style.borderColor = 'var(--navy)'; }
-    btn.onmouseenter = function() { if (!btn.classList.contains('active')) { btn.style.background = 'var(--cream)'; btn.style.borderColor = 'var(--gold)'; } };
-    btn.onmouseleave = function() { if (!btn.classList.contains('active')) { btn.style.background = '#fff'; btn.style.borderColor = 'var(--border)'; btn.style.color = 'var(--navy)'; } };
-    btn.onclick = function() {
-      document.querySelectorAll('#messenger-list button').forEach(function(b) {
-        b.classList.remove('active'); b.style.background = '#fff'; b.style.color = 'var(--navy)'; b.style.borderColor = 'var(--border)';
-      });
-      btn.classList.add('active'); btn.style.background = 'var(--navy)'; btn.style.color = '#fff'; btn.style.borderColor = 'var(--navy)';
-      loadMessengerIssue(issue.url, issue.date);
-    };
-    list.appendChild(btn);
-  });
-}
-
-function loadMessengerIssue(url, title) {
-  var frame = document.getElementById('messenger-frame');
-  var titleEl = document.getElementById('messenger-current-title');
-  var linkEl = document.getElementById('messenger-open-link');
-  if (frame) frame.src = url;
-  if (titleEl) titleEl.textContent = title;
-  if (linkEl) linkEl.href = url;
-}
-
-function searchMessenger(query) {
-  var q = query.toLowerCase().trim();
-  var filtered = q ? messengerIssues.filter(function(i) { return i.date.toLowerCase().includes(q); }) : messengerIssues;
-  buildMessengerList(filtered);
-  if (filtered.length > 0) loadMessengerIssue(filtered[0].url, filtered[0].date);
-}
-
-function initMessenger() {
-  buildMessengerList(messengerIssues);
-  if (messengerIssues.length > 0) loadMessengerIssue(messengerIssues[0].url, messengerIssues[0].date);
-}
-
 // ============================================================
 // CALENDAR EVENTS — easy to edit!
 // Add an event: { date: 'YYYY-MM-DD', title: 'Event Name', type: 'church' or 'school' }
@@ -3967,7 +3895,6 @@ function showPage(name, skipHistory) {
       document.getElementById('header-school').style.display = isSchool ? 'block' : 'none';
     }
     if (name === 'events') { showCalendar(); }
-    if (name === 'messenger') { initMessenger(); }
     if (name === 'supply-list') { renderSupplyList(); }
     if (name === 'current-families') { loadBanner(); renderStaffDirectory(); }
     if (name === 'school-staff') { renderStaffPage(); }
