@@ -1,18 +1,19 @@
 {
   "events": [
     {
+      "bannerSites": "both",
       "colorTheme": "gold",
+      "buttonLink": "https://factsmgt.com/login/",
+      "startDate": "2027-03-31",
       "title": "Re-Enrollment is Now Open",
       "tag": "Current Families",
-      "startDate": "2027-03-31",
-      "description": "We'd love to have your family back for another year at St. Mark's. Re-enroll through the FACTS Family Portal — spaces are limited. Deadline: March 31.",
-      "buttonText": "Re-Enroll Now →",
-      "buttonLink": "https://factsmgt.com/login/",
       "showAsBanner": true,
-      "bannerSites": "both",
-      "showOnCurrentFamilies": true
+      "description": "We'd love to have your family back for another year at St. Mark's. Re-enroll through the FACTS Family Portal — spaces are limited. Deadline: March 31.",
+      "showOnCurrentFamilies": true,
+      "buttonText": "Re-Enroll Now →"
     },
     {
+      "bannerSites": "both",
       "colorTheme": "gold",
       "timeLabel": "9:00am–12:00pm",
       "endDate": "2026-06-26",
@@ -20,23 +21,33 @@
       "startDate": "2026-06-22",
       "title": "Vacation Bible School",
       "tag": "Children & Youth",
+      "showAsBanner": false,
       "image": "images/VBS.png",
       "description": "Join us for a week of faith, fun, and friendship! VBS is open to all children and is one of the highlights of our summer. Crafts, songs, games, and God's Word — all wrapped into one amazing week.",
-      "buttonText": "Register Now",
-      "showAsBanner": false,
-      "bannerSites": "both",
-      "showOnCurrentFamilies": false
+      "showOnCurrentFamilies": false,
+      "buttonText": "Register Now"
     },
     {
+      "bannerSites": "both",
       "colorTheme": "navy",
+      "startDate": "2026-08-16",
       "title": "Back to School Picnic",
       "tag": "Children & Youth",
-      "startDate": "2026-08-16",
-      "buttonText": "",
+      "showAsBanner": false,
       "image": "/images/back-to-school-picnic.jpg",
       "description": "Join us for our back-to-school picnic to kick off the start of the 2026-2027 school year!",
-      "showAsBanner": false,
-      "bannerSites": "both",
+      "showOnCurrentFamilies": false,
+      "buttonText": ""
+    },
+    {
+      "bannerSites": "church",
+      "colorTheme": "gold",
+      "timeLabel": "12:00PM",
+      "startDate": "2026-11-22",
+      "title": "VBS Dessert Auction & Sloppy Joe Lunch",
+      "tag": "Community Event",
+      "showAsBanner": true,
+      "description": "Join us on Sunday, November 22, immediately following the 10:30am\nservice for a delicious meal and Silent Dessert Auction hosted by Ashley Weneck and Maggie Coon! All auction proceeds will directly support our Vacation Bible School next year. ",
       "showOnCurrentFamilies": false
     }
   ]
