@@ -13,7 +13,7 @@ collections:
   # ── EVENTS & CALLOUTS ─────────────────────────────────────────────────────────
   - name: "events"
     label: "🎉 Events & Callouts"
-    description: "Add, remove, or reorder the featured event cards on the Events page (things like Vacation Bible School, fall festivals, fundraisers, etc). The School Open House and Re-Enrollment cards are handled separately under 🗓️ Key Dates & School Year."
+    description: "Add, remove, or reorder the featured event cards on the Events page (things like Vacation Bible School, fall festivals, fundraisers, etc). Any event can also be turned into a site banner using the toggles below. The School Open House card is handled separately under 🗓️ Key Dates & School Year."
     files:
 
       - name: "events_list"
@@ -96,6 +96,28 @@ collections:
                   - { label: "Gold", value: "gold" }
                 hint: "Used as the card's solid background if no photo is uploaded, and as the color tint over the photo if one is uploaded."
 
+              - label: "Show as Homepage Banner?"
+                name: "showAsBanner"
+                widget: "boolean"
+                default: false
+                hint: "✅ ON = this event also appears as a banner at the top of the homepage(s) selected below, in addition to its event card. More than one event can be a banner at the same time — they'll stack."
+
+              - label: "Show Banner On Which Site(s)?"
+                name: "bannerSites"
+                widget: "select"
+                default: "both"
+                options:
+                  - { label: "Both Church & School", value: "both" }
+                  - { label: "Church Only", value: "church" }
+                  - { label: "School Only", value: "school" }
+                hint: "Only takes effect if \"Show as Homepage Banner\" above is ON. Controls whether this banner shows on the church homepage, the school homepage, or both."
+
+              - label: "Also Show on Current Families Page?"
+                name: "showOnCurrentFamilies"
+                widget: "boolean"
+                default: false
+                hint: "Only takes effect if \"Show as Homepage Banner\" above is also ON. Use this for Re-Enrollment or anything else current families specifically need to see."
+
   # ── KEY DATES & SCHOOL YEAR ───────────────────────────────────────────────────
   - name: "site-settings"
     label: "🗓️ Key Dates & School Year"
@@ -143,53 +165,6 @@ collections:
             time_format: false
             picker_utc: true
             hint: "The date re-enrollment opens for currently enrolled, returning students. Updates the Tuition, Events, and Key Dates pages automatically."
-
-  # ── BANNERS ──────────────────────────────────────────────────────────────────
-  - name: "banners"
-    label: "📢 Banners & Announcements"
-    description: "Turn banners on or off and update their text. Changes go live within about 30 seconds after you click Publish."
-    files:
-
-      - name: "reenrollment"
-        label: "Re-Enrollment Banner"
-        file: "_data/banner.json"
-        fields:
-
-          - label: "Show this banner on the website?"
-            name: "active"
-            widget: "boolean"
-            default: false
-            hint: "✅ ON = banner is visible to families. ❌ OFF = banner is hidden. Remember to click Publish after changing."
-
-          - label: "School Year"
-            name: "year"
-            widget: "string"
-            hint: "Shown at the top of the banner. Example: 2026–2027"
-
-          - label: "Banner Headline"
-            name: "headline"
-            widget: "string"
-            hint: "The big bold text families see first. Example: Re-Enrollment is Now Open"
-
-          - label: "Banner Description"
-            name: "description"
-            widget: "text"
-            hint: "1–2 sentences explaining what families should do."
-
-          - label: "Deadline Date"
-            name: "deadline"
-            widget: "string"
-            hint: "Just the date as text. Example: March 31  or  April 15, 2026"
-
-          - label: "Button Text"
-            name: "buttonText"
-            widget: "string"
-            hint: "The text on the button families click. Example: Re-Enroll Now →"
-
-          - label: "Button Link (URL)"
-            name: "buttonLink"
-            widget: "string"
-            hint: "Where the button takes families. Use the FACTS portal link or leave as-is."
 
   # ── SUPPLY LISTS ─────────────────────────────────────────────────────────────
   - name: "supply-list"
