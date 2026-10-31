@@ -7,3 +7,10 @@
   for = "/_data/*"
     [headers.values]
       Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Let browsers cache images long-term so repeat visitors don't
+# re-download them on every visit (cuts bandwidth significantly)
+[[headers]]
+  for = "/images/*"
+    [headers.values]
+      Cache-Control = "public, max-age=31536000"

@@ -134,7 +134,7 @@
   .event-date-badge { display: inline-flex; flex-direction: column; align-items: center; background: #fff; border-radius: 8px; padding: 8px 14px; min-width: 58px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
   .event-date-month { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark); }
   .event-date-day { font-size: 28px; font-weight: 900; line-height: 1; color: var(--navy); }
-  .event-card-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 10px; }
+  .event-card-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 10px; margin-left: 10px; }
   .event-card-title { font-size: 20px; font-weight: 700; color: #fff; line-height: 1.2; margin: 10px 0 4px; }
   .event-card-time { font-size: 13px; color: rgba(255,255,255,0.7); }
   .event-card-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
@@ -354,6 +354,26 @@
     .fee-table { font-size: 13px; }
     .fee-table td, .fee-table th { padding: 9px 10px; }
   }
+
+  /* FEEDBACK WIDGET */
+  #feedback-btn { position: fixed; right: 20px; bottom: 20px; z-index: 500; background: var(--navy); color: #fff; border: none; border-radius: 24px; padding: 11px 18px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.25); opacity: 0.85; transition: opacity 0.2s, transform 0.2s; display: flex; align-items: center; gap: 6px; }
+  #feedback-btn:hover { opacity: 1; transform: translateY(-2px); }
+  #feedback-overlay { display: none; position: fixed; inset: 0; background: rgba(20,8,40,0.55); z-index: 900; align-items: center; justify-content: center; padding: 20px; }
+  #feedback-overlay.open { display: flex; }
+  #feedback-modal { background: #fff; border-radius: 12px; max-width: 420px; width: 100%; padding: 32px 28px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-height: 90vh; overflow-y: auto; }
+  #feedback-close { position: absolute; top: 14px; right: 14px; background: none; border: none; font-size: 22px; line-height: 1; color: var(--text-light); cursor: pointer; padding: 4px; }
+  #feedback-close:hover { color: var(--text-dark); }
+  #feedback-modal h3 { font-family: 'Montserrat', sans-serif; font-size: 20px; color: var(--navy); margin-bottom: 6px; }
+  #feedback-modal p { font-size: 13px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.5; }
+  #feedback-form label { display: block; font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+  #feedback-form input[type="text"], #feedback-form input[type="email"], #feedback-form textarea { display: block; width: 100%; margin-top: 6px; padding: 10px 12px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400; color: var(--text-dark); text-transform: none; letter-spacing: normal; border: 1.5px solid var(--border); border-radius: 6px; resize: vertical; }
+  #feedback-form input[type="text"]:focus, #feedback-form input[type="email"]:focus, #feedback-form textarea:focus { outline: none; border-color: var(--navy); }
+  #feedback-submit { width: 100%; background: var(--navy); color: #fff; border: none; border-radius: 6px; padding: 13px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; margin-top: 4px; }
+  #feedback-submit:hover { background: var(--navy-mid); }
+  #feedback-submit:disabled { opacity: 0.6; cursor: default; }
+  #feedback-success { text-align: center; padding: 20px 0; }
+  #feedback-success h3 { margin-top: 8px; }
+  @media (max-width: 520px) { #feedback-btn { right: 14px; bottom: 14px; padding: 10px 14px; font-size: 12px; } }
 </style>
 </head>
 <body>
@@ -398,6 +418,8 @@
             <div class="dropdown-divider"></div>
             <span class="dropdown-link" onclick="showPage('serve')">Serve</span>
             <span class="dropdown-link" onclick="showPage('news')">News</span>
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-link" onclick="showPage('connect-federation')">Cincinnati Lutheran Federation</span>
           </div>
         </div>
         <div class="nav-item"><span class="nav-link" onclick="showPage('events')">Events</span></div>
@@ -424,6 +446,7 @@
         <span class="mob-sub" onclick="showPage('connect-groups')">Groups &amp; Classes</span>
         <span class="mob-sub" onclick="showPage('serve')">Serve</span>
         <span class="mob-sub" onclick="showPage('news')">News</span>
+        <span class="mob-sub" onclick="showPage('connect-federation')">Cincinnati Lutheran Federation</span>
         <span class="mob-item" onclick="showPage('events')">Events</span>
         <a class="mob-item" href="https://www.youtube.com/channel/UCBI14PAAnvzfveP2OaPAQBA/featured" target="_blank">Watch ↗</a>
         <span class="mob-item" onclick="showPage('give')">Give</span>
@@ -613,7 +636,7 @@
 
   <div style="padding:6px; background:#B8922A; box-shadow:0 4px 20px rgba(0,0,0,0.18);">
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px;">
-      <img src="images/st marks church.png" alt="St. Mark's Lutheran Church sanctuary" style="width:100%; height:280px; object-fit:cover; object-position:center; display:block;" />
+      <img src="images/st marks church.jpg" alt="St. Mark's Lutheran Church sanctuary" style="width:100%; height:280px; object-fit:cover; object-position:center; display:block;" />
       <img src="images/st marks church building.jpg" alt="St. Mark's Lutheran Church building" style="width:100%; height:280px; object-fit:cover; object-position:center; display:block;" />
       <img src="images/st marks church choir.jpg" alt="St. Mark's Church Choir" style="width:100%; height:280px; object-fit:cover; object-position:center; display:block;" />
     </div>
@@ -935,7 +958,7 @@
     </div>
 
     <!-- Sanctuary photo -->
-    <img src="images/st marks church.png" alt="St. Mark's Lutheran Church sanctuary" style="width:100%; height:300px; object-fit:cover; object-position:center 40%; border-radius:10px; display:block; margin-bottom:56px; box-shadow:0 4px 20px rgba(0,0,0,0.1);" />
+    <img src="images/st marks church.jpg" alt="St. Mark's Lutheran Church sanctuary" style="width:100%; height:300px; object-fit:cover; object-position:center 40%; border-radius:10px; display:block; margin-bottom:56px; box-shadow:0 4px 20px rgba(0,0,0,0.1);" />
 
     <!-- Pastor's word -->
     <div style="background:linear-gradient(135deg, #4A2E00 0%, var(--gold-dark) 55%, var(--gold) 100%); border-radius:8px; padding:40px 36px; margin-bottom:56px;">
@@ -1178,12 +1201,12 @@
   </div>
 
   <div class="photo-grid">
-    <div class="photo-grid-item"><img src="images/History 1.png" alt="St. Mark's sanctuary" /></div>
-    <div class="photo-grid-item"><img src="images/History 2.png" alt="St. Mark's sanctuary" /></div>
-    <div class="photo-grid-item"><img src="images/History 3.png" alt="St. Mark's sanctuary" /></div>
-    <div class="photo-grid-item"><img src="images/History 4.png" alt="St. Mark's sanctuary" /></div>
+    <div class="photo-grid-item"><img src="images/History 1.jpg" alt="St. Mark's sanctuary" /></div>
+    <div class="photo-grid-item"><img src="images/History 2.jpg" alt="St. Mark's sanctuary" /></div>
+    <div class="photo-grid-item"><img src="images/History 3.jpg" alt="St. Mark's sanctuary" /></div>
+    <div class="photo-grid-item"><img src="images/History 4.jpg" alt="St. Mark's sanctuary" /></div>
     <div class="photo-grid-item"><img src="images/History 5.jpg" alt="St. Mark's sanctuary" /></div>
-    <div class="photo-grid-item"><img src="images/History 6.png" alt="St. Mark's sanctuary" /></div>
+    <div class="photo-grid-item"><img src="images/History 6.jpg" alt="St. Mark's sanctuary" /></div>
   </div>
 
   <div class="section">
@@ -1379,7 +1402,7 @@
         <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; color:var(--navy); margin-bottom:6px;">St. Mark's Lutheran School Faculty</h3>
         <p style="font-size:14px; color:var(--text-mid);">Our dedicated teaching staff serves students from Preschool through 8th Grade. View the full faculty directory on the School page.</p>
       </div>
-      <button class="btn-primary" onclick="showPage('school')">View School Staff</button>
+      <button class="btn-primary" onclick="showPage('school-staff')">View School Staff</button>
     </div>
 
   </div>
@@ -2241,6 +2264,42 @@
   </div>
 </div>
 
+<!-- CONNECT: CINCINNATI LUTHERAN FEDERATION -->
+<div id="page-connect-federation" class="page">
+  <div class="hero hero-solid-church" style="padding:34px 2rem 28px; text-align:center;">
+    <div class="solid-cross">&#x271D;</div>
+    <div class="hero-content">
+      <div class="hero-badge">St. Mark's Lutheran Church</div>
+      <h1 class="hero-title">Cincinnati Lutheran Federation</h1>
+      <p class="hero-sub">Partnering with Missouri Synod congregations across Cincinnati to do together what no single church could do alone.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div style="text-align:center; max-width:640px; margin:0 auto 48px;">
+      <div class="section-label">Who They Are</div>
+      <h2 class="section-title">The Cincinnati Federation of Lutheran Churches</h2>
+      <div class="divider" style="margin:16px auto 24px;"></div>
+      <p class="section-body">St. Mark's is one of <strong>17 member congregations</strong> of the Cincinnati Federation of Lutheran Churches, a lay organization of Missouri Synod churches across the Cincinnati area. The Federation's mission is to bring God's Word and hope to people through ministries that can be done more effectively together than by any single congregation alone.</p>
+    </div>
+    <div style="max-width:640px; margin:0 auto 48px;">
+      <div class="service-row"><div class="service-info"><strong>17 Member Congregations</strong>A network of LCMS churches throughout Greater Cincinnati working together in shared ministry and mission.</div></div>
+      <div class="service-row"><div class="service-info"><strong>The Cincinnati Lutheran</strong>The Federation's newsletter, sharing news and updates from member congregations across the area.</div></div>
+      <div class="service-row"><div class="service-info"><strong>POBLO Outreach</strong>A community outreach ministry supported by the Federation, extending care beyond the walls of any one church.</div></div>
+      <div class="service-row"><div class="service-info"><strong>Executive Chaplain</strong>The Federation maintains a shared chaplaincy ministry serving member congregations and the wider community.</div></div>
+    </div>
+    <div class="highlight-box" style="text-align:center;">
+      <div class="section-label">Learn More</div>
+      <h3 class="section-title" style="color:#fff; font-size:22px;">Visit the Federation Online</h3>
+      <div class="divider" style="margin:16px auto 24px;"></div>
+      <p class="section-body" style="max-width:520px; margin:0 auto 20px;">Explore member churches, upcoming Federation events, and the latest issue of The Cincinnati Lutheran newsletter.</p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn-primary" href="https://cincinnatilutheran.squarespace.com/" target="_blank" style="background:var(--gold);">Visit Cincinnati Lutheran</a>
+        <a class="btn-outline" href="https://cincinnatilutheran.squarespace.com/the-cincinnati-lutheran" target="_blank">Read the Newsletter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MESSENGER PAGE -->
 <div id="page-messenger" class="page">
   <div class="hero hero-solid-school" style="padding:34px 2rem 28px; text-align:center;">
@@ -2922,7 +2981,7 @@
     <div class="divider"></div>
     <div class="card-grid" style="margin-bottom:48px;">
       <div class="card" style="padding:0; overflow:hidden;">
-        <img src="images/st marks school basketball.webp" alt="Basketball Club" style="width:100%; height:180px; object-fit:cover; display:block;" />
+        <img src="images/st marks school basketball.jpg" alt="Basketball Club" style="width:100%; height:180px; object-fit:cover; display:block;" />
         <div style="padding:20px 24px;">
           <div class="card-title">Basketball Club</div>
           <div style="font-size:11px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Grades 4&ndash;8</div>
@@ -2930,7 +2989,7 @@
         </div>
       </div>
       <div class="card" style="padding:0; overflow:hidden;">
-        <img src="images/st marks school volleyball.webp" alt="Volleyball Club" style="width:100%; height:180px; object-fit:cover; display:block;" />
+        <img src="images/st marks school volleyball.jpg" alt="Volleyball Club" style="width:100%; height:180px; object-fit:cover; display:block;" />
         <div style="padding:20px 24px;">
           <div class="card-title">Volleyball Club</div>
           <div style="font-size:11px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Grades 4&ndash;8</div>
@@ -3207,6 +3266,33 @@
     </div>
   </div>
 </footer>
+
+<!-- FEEDBACK WIDGET -->
+<button id="feedback-btn" onclick="toggleFeedback(true)" aria-label="Give feedback about this website">💬 Feedback</button>
+
+<div id="feedback-overlay" onclick="if(event.target===this) toggleFeedback(false)">
+  <div id="feedback-modal">
+    <button id="feedback-close" onclick="toggleFeedback(false)" aria-label="Close feedback form">&times;</button>
+    <div id="feedback-form-wrap">
+      <h3>Website Feedback</h3>
+      <p>Notice something off, or have a suggestion for the site? Let us know below.</p>
+      <form id="feedback-form" name="website-feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitFeedback(event)">
+        <input type="hidden" name="form-name" value="website-feedback" />
+        <p style="position:absolute; left:-9999px;"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+        <input type="hidden" name="page" id="feedback-page-field" value="" />
+        <label>Your Name (optional)<input type="text" name="name" /></label>
+        <label>Your Email (optional — in case we want to follow up)<input type="email" name="email" /></label>
+        <label>Feedback<textarea name="message" required rows="4"></textarea></label>
+        <button type="submit" id="feedback-submit">Send Feedback</button>
+      </form>
+    </div>
+    <div id="feedback-success" style="display:none;">
+      <div style="font-size:40px;">✅</div>
+      <h3>Thank you!</h3>
+      <p>Your feedback has been sent.</p>
+    </div>
+  </div>
+</div>
 
 <script>
 // ============================================================
@@ -3991,6 +4077,47 @@ function showCalendar() {
 }
 showCalendar();
 renderSermonFeature();
+
+function toggleFeedback(open) {
+  var overlay = document.getElementById('feedback-overlay');
+  if (open) {
+    var pageField = document.getElementById('feedback-page-field');
+    var activePage = document.querySelector('.page.active');
+    if (pageField) pageField.value = (activePage ? activePage.id : 'unknown') + ' — ' + document.title;
+    overlay.classList.add('open');
+  } else {
+    overlay.classList.remove('open');
+  }
+}
+
+function submitFeedback(e) {
+  e.preventDefault();
+  var form = document.getElementById('feedback-form');
+  var btn = document.getElementById('feedback-submit');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  var data = new URLSearchParams(new FormData(form)).toString();
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: data
+  }).then(function() {
+    document.getElementById('feedback-form-wrap').style.display = 'none';
+    document.getElementById('feedback-success').style.display = 'block';
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = 'Send Feedback';
+    setTimeout(function() {
+      toggleFeedback(false);
+      document.getElementById('feedback-form-wrap').style.display = 'block';
+      document.getElementById('feedback-success').style.display = 'none';
+    }, 2500);
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Send Feedback';
+    alert('Something went wrong sending your feedback. Please try again, or email us directly.');
+  });
+}
 </script>
 
 </body>
