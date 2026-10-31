@@ -1,8 +1,8 @@
 {
   "events": [
     {
-      "bannerSites": "both",
-      "colorTheme": "gold",
+      "bannerSites": "school",
+      "colorTheme": "navy",
       "buttonLink": "https://factsmgt.com/login/",
       "startDate": "2027-03-31",
       "title": "Re-Enrollment is Now Open",
