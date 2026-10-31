@@ -374,6 +374,19 @@
   #feedback-success { text-align: center; padding: 20px 0; }
   #feedback-success h3 { margin-top: 8px; }
   @media (max-width: 520px) { #feedback-btn { right: 14px; bottom: 14px; padding: 10px 14px; font-size: 12px; } }
+
+  /* FACTS INQUIRY FORM MODAL */
+  #facts-overlay { display: none; position: fixed; inset: 0; background: rgba(20,8,40,0.6); z-index: 950; align-items: center; justify-content: center; padding: 20px; }
+  #facts-overlay.open { display: flex; }
+  #facts-modal { background: #fff; border-radius: 12px; max-width: 760px; width: 100%; height: 90vh; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden; }
+  #facts-modal-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  #facts-modal-header h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; color: var(--navy); }
+  #facts-close { background: none; border: none; font-size: 24px; line-height: 1; color: var(--text-light); cursor: pointer; padding: 4px; }
+  #facts-close:hover { color: var(--text-dark); }
+  #facts-iframe-wrap { flex: 1; position: relative; background: var(--cream); }
+  #facts-iframe-wrap iframe { width: 100%; height: 100%; border: 0; display: block; position: relative; z-index: 1; }
+  #facts-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-mid); background: var(--cream); z-index: 2; }
+  @media (max-width: 600px) { #facts-modal { height: 95vh; max-width: 100%; } }
 </style>
 </head>
 <body>
@@ -488,7 +501,7 @@
             <span class="dropdown-link" onclick="showPage('enroll')">Enroll Now</span>
             <span class="dropdown-link" onclick="showPage('tuition')">Tuition &amp; Fees</span>
             <span class="dropdown-link" onclick="showPage('extended-care')">Extended Care</span>
-            <a class="dropdown-link" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Ask a Question</a>
+            <span class="dropdown-link" onclick="openFactsForm()">Ask a Question</span>
           </div>
         </div>
         <div class="nav-item">
@@ -518,7 +531,7 @@
           </div>
         </div>
         <div class="nav-item"><span class="nav-link" onclick="showPage('events')">Events</span></div>
-        <a class="nav-cta" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Schedule a Tour</a>
+        <span class="nav-cta" onclick="openFactsForm()">Schedule a Tour</span>
       </div>
       <button class="hamburger" id="hamburger-school" onclick="toggleMenu('school')" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -533,7 +546,7 @@
         <span class="mob-sub" onclick="showPage('enroll')">Enroll Now</span>
         <span class="mob-sub" onclick="showPage('tuition')">Tuition &amp; Fees</span>
         <span class="mob-sub" onclick="showPage('extended-care')">Extended Care</span>
-        <a class="mob-sub" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Ask a Question</a>
+        <span class="mob-sub" onclick="openFactsForm()">Ask a Question</span>
         <span class="mob-item" onclick="showPage('academics')">Academics</span>
         <span class="mob-sub" onclick="showPage('academics-curriculum')">Curriculum</span>
         <span class="mob-sub" onclick="showPage('academics-faith')">Faith Integration</span>
@@ -548,7 +561,7 @@
         <span class="mob-sub" onclick="showPage('supply-list')">Supply List</span>
         <span class="mob-sub" onclick="showPage('messenger')">St. Mark's Messenger</span>
         <span class="mob-item" onclick="showPage('events')">Events</span>
-        <a class="mob-cta" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Schedule a Tour</a>
+        <span class="mob-cta" onclick="openFactsForm()">Schedule a Tour</span>
       </div>
     </nav>
   </div>
@@ -736,7 +749,7 @@
     <div class="hero-content" style="margin:0; max-width:580px; text-align:left;">
       <h1 class="hero-title" style="font-size:50px; font-weight:400; line-height:1.1; text-align:left; margin-bottom:0;">Connecting students with Jesus while providing excellence in education.</h1>
       <div class="hero-actions" style="margin-top:32px; justify-content:flex-start;">
-        <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="background:linear-gradient(135deg,var(--gold-dark),var(--gold)); box-shadow:0 2px 10px rgba(184,146,42,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">Schedule a Tour</a>
+        <span class="btn-primary" onclick="openFactsForm()" style="background:linear-gradient(135deg,var(--gold-dark),var(--gold)); box-shadow:0 2px 10px rgba(184,146,42,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">Schedule a Tour</span>
         <span class="btn-outline" onclick="showPage('admissions')" style="background:#fff; color:var(--navy); border-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15);">Admissions Info</span>
       </div>
     </div>
@@ -843,7 +856,7 @@
         <p style="font-size:14px; color:var(--text-mid); margin-top:8px; max-width:400px;">We'd love to show you our school. Contact us to learn more about admissions, tuition, and what makes St. Mark's special.</p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Contact Us</a>
+        <span class="btn-primary" onclick="openFactsForm()">Contact Us</span>
         <span class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" onclick="showPage('admissions')">Admissions</span>
       </div>
     </div>
@@ -1862,7 +1875,7 @@
       </div>
 
       <div style="text-align:center; margin-top:48px;">
-        <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Schedule a Tour</a>
+        <span class="btn-primary" onclick="openFactsForm()">Schedule a Tour</span>
       </div>
 
     </div>
@@ -2033,7 +2046,7 @@
         <p style="font-size:14px; color:var(--text-mid);">Questions about tuition, scholarships, or financial aid? We're here to help.</p>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Contact Us</a>
+        <span class="btn-primary" onclick="openFactsForm()">Contact Us</span>
         <a class="btn-outline" style="color:var(--navy); border-color:rgba(0,0,0,0.2);" href="https://factsmgt.com/login/" target="_blank">FACTS Family Portal</a>
       </div>
     </div>
@@ -2130,7 +2143,7 @@
         </div>
         <div class="event-card-body">
           <p class="event-card-desc">Prospective families are invited to tour St. Mark's Lutheran School, meet our faculty and staff, and learn about enrollment for the upcoming school year. New student enrollment opens at this event.</p>
-          <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank">Schedule a Tour</a>
+          <span class="btn-primary" onclick="openFactsForm()">Schedule a Tour</span>
         </div>
       </div>
 
@@ -3097,7 +3110,7 @@
       <div class="section-label">Getting Started</div>
       <h2 class="section-title">Your Path to St. Mark's</h2>
       <div class="divider" style="margin:16px auto 24px;"></div>
-      <p class="section-body">From first inquiry to first day of school, our admissions team is here to guide your family every step of the way. Contact our Admissions Coordinator, <strong>Rachel Bailey</strong>, at <a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="color:var(--navy); font-weight:600;">our online inquiry form</a> or <a href="tel:5135753354" style="color:var(--navy); font-weight:600;">(513) 575-3354</a>.</p>
+      <p class="section-body">From first inquiry to first day of school, our admissions team is here to guide your family every step of the way. Contact our Admissions Coordinator, <strong>Rachel Bailey</strong>, at <span onclick="openFactsForm()" style="color:var(--navy); font-weight:600; text-decoration:underline; cursor:pointer;">our online inquiry form</span> or <a href="tel:5135753354" style="color:var(--navy); font-weight:600;">(513) 575-3354</a>.</p>
     </div>
     <div class="card-grid">
       <div class="card" style="cursor:pointer;" onclick="showPage('enroll')">
@@ -3153,13 +3166,13 @@
           <div class="timeline-date">Step 1</div>
           <div class="timeline-title">Submit an Inquiry</div>
           <div class="timeline-body">Complete an online inquiry form to express your interest in St. Mark's Lutheran School. Our Admissions Coordinator, <strong>Rachel Bailey</strong>, will follow up with you personally to answer questions and guide you through the process.<br><br>
-          📝 <a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="color:var(--navy); font-weight:600;">Submit an Inquiry</a> &nbsp;|&nbsp; 📞 <a href="tel:5135753354" style="color:var(--navy); font-weight:600;">(513) 575-3354</a></div>
+          📝 <span onclick="openFactsForm()" style="color:var(--navy); font-weight:600; text-decoration:underline; cursor:pointer;">Submit an Inquiry</span> &nbsp;|&nbsp; 📞 <a href="tel:5135753354" style="color:var(--navy); font-weight:600;">(513) 575-3354</a></div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-date">Step 2</div>
           <div class="timeline-title">Visit Our Campus</div>
-          <div class="timeline-body">Experience St. Mark's for yourself. Our <strong>Open House</strong> is regularly held on the last Sunday in January, from 1:00–3:00 PM — a great opportunity to tour the school, meet faculty, and ask questions.<br><br>Individual campus visit appointments can also be arranged at any time through <a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="color:var(--navy); font-weight:600;">Rachel Bailey</a>.</div>
+          <div class="timeline-body">Experience St. Mark's for yourself. Our <strong>Open House</strong> is regularly held on the last Sunday in January, from 1:00–3:00 PM — a great opportunity to tour the school, meet faculty, and ask questions.<br><br>Individual campus visit appointments can also be arranged at any time through <span onclick="openFactsForm()" style="color:var(--navy); font-weight:600; text-decoration:underline; cursor:pointer;">Rachel Bailey</span>.</div>
         </div>
 
         <div class="timeline-item">
@@ -3205,7 +3218,7 @@
       <div class="service-row" style="padding:12px 0;"><div class="service-day dyn-date" data-source="reenrollOpen" data-format="short">Jan 1</div><div class="service-info"><strong>Re-enrollment opens</strong>For currently enrolled returning students</div></div>
       <div class="service-row" style="padding:12px 0;"><div class="service-day dyn-date" data-source="openHouse" data-format="short">Jan 26</div><div class="service-info"><strong>Open House</strong>1:00–3:00 PM — campus tours and faculty introductions</div></div>
       <div class="service-row" style="padding:12px 0;"><div class="service-day dyn-date" data-source="enrollOpen" data-format="short">Jan 25</div><div class="service-info"><strong>Applications open</strong>For new students for the <span class="enrollment-year">2026–2027</span> school year</div></div>
-      <div class="service-row" style="padding:12px 0; border-bottom:none;"><div class="service-day">Ongoing</div><div class="service-info"><strong>Shadow days available</strong><a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="color:inherit; text-decoration:underline;">Contact Rachel Bailey</a> to schedule your child's visit</div></div>
+      <div class="service-row" style="padding:12px 0; border-bottom:none;"><div class="service-day">Ongoing</div><div class="service-info"><strong>Shadow days available</strong><span onclick="openFactsForm()" style="color:inherit; text-decoration:underline; cursor:pointer;">Contact Rachel Bailey</span> to schedule your child's visit</div></div>
     </div>
 
     <!-- Contact + CTA -->
@@ -3214,9 +3227,9 @@
       <h3 class="section-title" style="color:#fff; font-size:22px;">Contact Our Admissions Office</h3>
       <div class="divider"></div>
       <p class="section-body" style="font-size:15px;"><strong style="color:#fff;">Rachel Bailey</strong> — Admissions Coordinator<br>
-      <a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="color:var(--gold-light);">Submit an Inquiry</a> &nbsp;|&nbsp; <a href="tel:5135753354" style="color:var(--gold-light);">(513) 575-3354</a></p>
+      <span onclick="openFactsForm()" style="color:var(--gold-light); text-decoration:underline; cursor:pointer;">Submit an Inquiry</span> &nbsp;|&nbsp; <a href="tel:5135753354" style="color:var(--gold-light);">(513) 575-3354</a></p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-        <a class="btn-primary" href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="background:var(--gold);">Contact Us</a>
+        <span class="btn-primary" onclick="openFactsForm()" style="background:var(--gold);">Contact Us</span>
         <button class="btn-outline" onclick="showPage('tuition')">View Tuition &amp; Fees</button>
       </div>
     </div>
@@ -3266,6 +3279,23 @@
     </div>
   </div>
 </footer>
+
+<!-- FACTS INQUIRY FORM MODAL -->
+<div id="facts-overlay" onclick="if(event.target===this) closeFactsForm()">
+  <div id="facts-modal">
+    <div id="facts-modal-header">
+      <div>
+        <h3>Contact Admissions</h3>
+        <a href="https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh" target="_blank" style="font-size:11px; color:var(--text-light);">Form not loading? Open in a new tab instead →</a>
+      </div>
+      <button id="facts-close" onclick="closeFactsForm()" aria-label="Close">&times;</button>
+    </div>
+    <div id="facts-iframe-wrap">
+      <div id="facts-loading">Loading form…</div>
+      <iframe id="facts-iframe" title="St. Mark's Admissions Inquiry Form" onload="hideFactsLoading()"></iframe>
+    </div>
+  </div>
+</div>
 
 <!-- FEEDBACK WIDGET -->
 <button id="feedback-btn" onclick="toggleFeedback(true)" aria-label="Give feedback about this website">💬 Feedback</button>
@@ -4077,6 +4107,24 @@ function showCalendar() {
 }
 showCalendar();
 renderSermonFeature();
+
+var FACTS_FORM_URL = 'https://smlm-oh.client.factsmgt.com/oa/inquiry.cfm?memberId=17844&districtCode=smlm-oh';
+
+function openFactsForm() {
+  closeMobileMenus();
+  var overlay = document.getElementById('facts-overlay');
+  var iframe = document.getElementById('facts-iframe');
+  if (!iframe.src) { iframe.src = FACTS_FORM_URL; }
+  overlay.classList.add('open');
+}
+
+function closeFactsForm() {
+  document.getElementById('facts-overlay').classList.remove('open');
+}
+
+function hideFactsLoading() {
+  document.getElementById('facts-loading').style.display = 'none';
+}
 
 function toggleFeedback(open) {
   var overlay = document.getElementById('feedback-overlay');
