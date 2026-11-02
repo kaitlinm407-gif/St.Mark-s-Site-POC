@@ -3,13 +3,14 @@
     {
       "bannerSites": "school",
       "colorTheme": "navy",
+      "endDate": "2027-03-31",
       "buttonLink": "https://factsmgt.com/login/",
-      "startDate": "2027-03-31",
+      "startDate": "2027-01-01",
       "title": "Re-Enrollment is Now Open",
       "tag": "Current Families",
-      "showAsBanner": true,
+      "showAsBanner": false,
       "description": "We'd love to have your family back for another year at St. Mark's. Re-enroll through the FACTS Family Portal — spaces are limited. Deadline: March 31.",
-      "showOnCurrentFamilies": true,
+      "showOnCurrentFamilies": false,
       "buttonText": "Re-Enroll Now →"
     },
     {
